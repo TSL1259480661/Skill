@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbc7bf5648efaf4aa326f84ae645232, type: 3}
+  m_Name: Main
+  m_EditorClassIdentifier: 
+  IdleLeft: {fileID: 11400000, guid: e90226cba1a91334899dc92172aa7b2d, type: 2}
+  IdleRight: {fileID: 11400000, guid: e90226cba1a91334899dc92172aa7b2d, type: 2}
+  MoveLeft: {fileID: 0}
+  MoveRight: {fileID: 0}
+  Hurt: {fileID: 0}
+  Death: {fileID: 11400000, guid: 4d9973caff285f840958cc399d6dc4ae, type: 2}
+  Reload: {fileID: 0}
+  WindUp: {fileID: 0}
+  WindUp2: {fileID: 0}
+  WindDown: {fileID: 0}
+  WindDown2: {fileID: 0}
+  Imbalance: {fileID: 0}
+  Skill11: {fileID: 11400000, guid: cff58a689c748b04db26f9218f0bf26a, type: 2}
+  Skill12: {fileID: 11400000, guid: cb64685b09e3b2441a4ad3b8f549b919, type: 2}
+  Skill13: {fileID: 0}
+  Skill14: {fileID: 0}
+  Skill15: {fileID: 0}
+  Skill21: {fileID: 0}
+  Skill22: {fileID: 0}
+  Skill23: {fileID: 0}
+  Skill24: {fileID: 0}
+  Skill25: {fileID: 0}

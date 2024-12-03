@@ -1,0 +1,157 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+message PresetGems
+{
+  // 装备位置id
+  int32 partId = 1;
+  // 装备的预设页数 有效值[0,2]
+  int32 presetNum = 2;
+  // 装备的宝石  下标为宝石槽位索引：[0,4]；值为宝石配置id；若没有宝石则填充0
+  repeated int32 gemCidList = 3;
+}
+
+// 宝石合成的请求
+//ResponseType = FusionGemsResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gem/fusion
+message FusionGemsReq // IRequest
+{
+  // 需要合成的宝石
+  repeated RoleItemDto gemsToFusion = 1;
+}
+
+message FusionGemsResp // IResponse
+{
+  repeated RoleItemChangeDto useItems = 1; // 本次合成所消耗的物品
+  repeated RoleItemChangeDto addGems = 2; // 本次合成所获得的物品
+}
+
+// 宝石洗炼的请求
+//ResponseType = RefineGemResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gem/refine
+message RefineGemReq // IRequest
+{
+  // 宝石配置id
+  int32 cid = 1;
+}
+
+message RefineGemResp // IResponse
+{
+  repeated RoleItemChangeDto chgItems = 1; // 本次洗炼所消耗的物品
+//  int32 resultGemCid = 2; // 洗炼结果宝石的cid
+  RoleItemChangeDto newGem = 2; // 本次洗炼的结果宝石
+}
+
+//// 宝石洗炼保存的请求
+////ResponseType = RefineConfirmResp
+////MessageVerb = POST
+////GameUrlOpcode = api/gem/refine/confirm
+//message RefineConfirmReq // IRequest
+//{
+//  // 洗炼结果cid
+//  int32 cid = 1;
+//}
+//
+//message RefineConfirmResp // IResponse
+//{
+//  RoleItemChangeDto consumeGem = 1; // 本次洗炼所消耗的宝石
+//  RoleItemChangeDto gainGem = 2; // 本次洗炼所获得的宝石
+//}
+
+
+// 获取预设页数的所有宝石请求
+//ResponseType = GetWearGemsListResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gem/wear/list
+message GetWearGemsListReq // IRequest
+{
+}
+
+message GetWearGemsListResp // IResponse
+{
+  repeated PresetGems partInfos = 1;
+  repeated int32 allLockedGems = 2; // 所有上锁的宝石配置id
+}
+
+// 宝石加锁操作请求
+//ResponseType = OperateOkResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gem/operate
+message OperateGemReq // IRequest
+{
+  // 宝石配置id
+  int32 cid = 1;
+  // 操作类型 1:上锁；2：解锁
+  int32 operateType = 2;
+}
+
+// 操作成功返回
+message OperateOkResp // IResponse
+{
+  bool ok = 1;
+}
+
+
+//// 卸下指定页面的所有宝石请求
+////ResponseType = UnloadAllGemResp
+////MessageVerb = POST
+////GameUrlOpcode = api/gem/unload_all
+//message UnloadAllGemReq // IRequest
+//{
+//  // 指定的预设页数 有效值: [0,2]
+//  int32 presetNum = 1;
+//}
+//
+//// 卸下指定页面的所有宝石返回
+//message UnloadAllGemResp // IResponse
+//{
+//  // 受影响的预设页信息
+//  repeated PartWearGems partInfos = 1;
+//}
+
+//指定位置镶嵌宝石请求
+//ResponseType = InlayGemResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gem/inlay
+message InlayGemReq // IRequest
+{
+  // 镶嵌宝石所在的预设页数 有效值: [0,2]
+  int32 presetNum = 2;
+  // 宝石的配置id
+  int32 gemCid = 3;
+  // 宝石槽的索引 有效值: [0,4]
+  int32 slotIndex = 4;
+}
+
+message InlayGemResp // IResponse
+{
+  // 受到影响的预设页信息
+  PresetGems partInfo = 1;
+}
+
+//装备宝石卸下请求
+//ResponseType = UnloadGemResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gem/unload
+message UnloadGemReq // IRequest
+{
+  // 镶嵌宝石的配置id
+  int32 gemCid = 1;
+  // 镶嵌宝石所在的预设页数 有效值: [0,2]
+  int32 presetNum = 2;
+  // 宝石槽的索引 有效值: [0,4]
+  int32 slotIndex = 3;
+}
+
+message UnloadGemResp // IResponse
+{
+  // 受到影响的预设页信息
+  PresetGems presetInfo = 1;
+}

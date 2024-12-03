@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "item.proto";
+package transfer;
+
+option go_package = "./transfer";
+
+
+//请求技能列表
+//ResponseType = GetSkillsResp
+//MessageVerb = POST
+//GameUrlOpcode = api/skill/list
+message GetSkillsReq  // IRequest
+{
+}
+
+// 响应技能列表
+message GetSkillsResp // IResponse
+{
+  // 技能列表
+  repeated int32 skills = 1;
+}
+
+
+//请求升级技能
+//ResponseType = UpgradeSkillResp
+//MessageVerb = POST
+//GameUrlOpcode = api/skill/upgrade
+message UpgradeSkillReq // IRequest
+{
+  // 技能配置id
+  int32 cid = 1;
+}
+
+// 响应升级技能
+message UpgradeSkillResp // IResponse
+{
+  // 升级消耗
+  repeated RoleItemChangeDto costs = 1;
+}

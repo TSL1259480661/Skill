@@ -1,0 +1,134 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// 查询正在进行的活动列表
+//ResponseType = ActivityListResp
+//MessageVerb = POST
+//GameUrlOpcode = api/activity/list
+message ActivityListReq // IRequest
+{
+}
+
+// 广告获奖响应
+message ActivityListResp // IResponse
+{
+  // 奖励
+  repeated ActivityDto activities = 1;
+}
+
+// 活动行为请求
+//ResponseType = ActivityActionResp
+//MessageVerb = POST
+//GameUrlOpcode = api/activity/action
+message ActivityActionReq // IRequest
+{
+  int64 activityId = 1;
+  ActivityActionType type = 2;
+//  string body = 3;// 具体message序列化后的字符串
+  bytes body = 3;// 具体message序列化后的内容
+}
+
+// 获取玩家相关的广告信息
+message ActivityActionResp // IResponse
+{
+//  string body = 1;// 具体message序列化后的字符串
+  bytes body = 1;// 具体message序列化后的字符串
+//  repeated RoleItemChangeDto rewards = 2; // 奖励(如果有）
+}
+
+message ActivityDto
+{
+  int64 id = 1;
+  string name = 2;
+  string desc = 3;
+  int64 startTime = 4; // 开始时间戳(毫秒)
+  int64 endTime = 5; // 结束时间戳(毫秒)
+  int32 configId = 6; // 配置表id
+}
+
+// 活动行为枚举，对应各类型活动的行为方式。这里列举了常用行为，自定义枚举按此格式：{activityType}_{messageName}
+enum ActivityActionType
+{
+  None = 0;
+  Common_Query = 1; // 通用查询
+  Common_ProgressUpdate = 2; // 通用进度更新
+  Common_Reward = 3; // 通用领取奖励
+
+  Flip_AddUseCount = 101; // 幸运秘宝活动--翻牌增加可用次数
+  Flip_Rest = 102; // 幸运秘宝活动--重置层数
+
+}
+
+// 定义具体的活动请求和响应↓↓↓
+
+// 翻牌活动请求 ActivityActionType = Common_Query
+message ActivityFlipQueryReq
+{
+}
+
+// 翻牌活动响应
+message ActivityFlipQueryResp
+{
+  ActivityFlipDto result = 1;// 该活动的详情内容
+}
+
+
+// 翻牌活动信息
+message ActivityFlipDto
+{
+  int32 MaxDepth = 1; // 本次活动的总层数
+  int32 leftCount = 2; // 玩家当前的剩余翻牌次数
+  int32 depth = 3;// 深度从1开始
+  repeated ActivityFlipSlotDto slots = 4;// 已经翻开的槽位
+  int32 leftAdCount = 5; // 玩家当前的剩余通过广告增加翻牌机会的次数
+  int32 resetCount = 6; // 玩家当前已重置的次数
+}
+
+// 翻牌活动槽位
+message ActivityFlipSlotDto
+{
+  int32 index = 1; // 槽位索引 [0, 19]
+  ChangeItemDto rewards = 2; // 该槽位上的奖励
+}
+
+// 翻牌活动增加可用次数请求 ActivityActionType = Flip_AddUseCount
+message ActivityFlipAddUseCountReq
+{
+  int32 costType = 1; // 1：通过广告；2：通过道具
+}
+
+// 翻牌活动增加可用次数响应
+message ActivityFlipAddUseCountResp
+{
+  int32 leftCount = 1; // 玩家剩余的翻牌次数
+  RoleItemChangeDto leftItem = 2; // 若消耗的是道具，则更新道具信息
+}
+
+// 翻牌活动选牌请求 ActivityActionType = Common_Reward
+message ActivityFlipSelectReq
+{
+  int32 index = 1; // 槽位索引 [0, 19]
+}
+
+// 翻牌活动选牌响应
+message ActivityFlipSelectResp
+{
+  ActivityFlipDto nowStatus = 1; // 当前层的状态，包含玩家的剩余翻牌次数。若未翻到目标牌，则仅更新了指定牌的内容； 若提前翻到目标牌，则依次包含未翻牌的内容
+  bool hasHitTarget = 2; // 本次翻牌是否命中目标牌
+  repeated RoleItemChangeDto rewards = 3; // 本次翻牌所获得的具体奖励
+}
+
+// 翻牌活动重置请求 ActivityActionType = Flip_Reset
+message ActivityFlipResetReq
+{
+}
+
+message ActivityFlipResetResp
+{
+  ActivityFlipDto nowStatus = 1; // 当前层的状态，包含玩家已重置的次数
+}

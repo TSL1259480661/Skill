@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: AnWuZhi
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 847135c5cedb38f49a5622a36e17f5b0, type: 3}
+  - {fileID: 21300000, guid: 5d98adada00aa3c48b04b7c864fc341c, type: 3}
+  - {fileID: 21300000, guid: 1d9ff3d05a11a4b4fab7aaf8981a91cd, type: 3}
+  - {fileID: 21300000, guid: 9b426ed96194edc429cc40e4c360c81d, type: 3}
+  - {fileID: 21300000, guid: 41dfadb313cc95f41a22be8984c22920, type: 3}
+  - {fileID: 21300000, guid: 59383b25ad6460b44b85d93929dc3a51, type: 3}
+  - {fileID: 21300000, guid: 88d99d84e1381124a9e3b87546a2b042, type: 3}
+  - {fileID: 21300000, guid: a93b0253d4722414f8f0e1184fc399b1, type: 3}
+  - {fileID: 21300000, guid: 4487df09e52bb0f43931e0abb8304761, type: 3}
+  - {fileID: 21300000, guid: 5574af7aeefb78341a3ea44c9e29be60, type: 3}
+  - {fileID: 21300000, guid: ab392c9648966d04d90973bcf2b0e9e1, type: 3}
+  - {fileID: 21300000, guid: cd6bbeeaa1310784daa715891345e22c, type: 3}
+  - {fileID: 21300000, guid: 6c1720dbfe8c4bc4c99e085470705b3d, type: 3}
+  - {fileID: 21300000, guid: 4e95bde70ce116a4699250d146ab0347, type: 3}
+  - {fileID: 21300000, guid: dd88a840d5a44584cb51b488416d2d8b, type: 3}
+  - {fileID: 21300000, guid: a17df6ba22f5c9b419cb205f66bc1ba8, type: 3}

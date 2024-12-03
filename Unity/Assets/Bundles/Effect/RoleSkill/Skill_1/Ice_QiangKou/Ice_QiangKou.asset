@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Ice_QiangKou
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 0bc0efc86f18b72418a3b29253040efa, type: 3}
+  - {fileID: 21300000, guid: 810503312a27bf049ba7cd963bd48ab4, type: 3}
+  - {fileID: 21300000, guid: c4ffeb2f781c6eb44a90c314d32a2025, type: 3}
+  - {fileID: 21300000, guid: c5392786bea57c64fa6c037f27e8dbb4, type: 3}
+  - {fileID: 21300000, guid: da9dc69851775f44fb56e022eabae353, type: 3}
+  - {fileID: 21300000, guid: 185a5690ebb215a44b7fb9798653172a, type: 3}
+  - {fileID: 21300000, guid: b1b97fab4b8b8974fac9b757c4687b8b, type: 3}
+  - {fileID: 21300000, guid: 91d4b87307b345b48b5166b92eb57255, type: 3}
+  - {fileID: 21300000, guid: 139c526beec265e4496e41782191270d, type: 3}

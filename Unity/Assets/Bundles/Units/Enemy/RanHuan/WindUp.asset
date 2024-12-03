@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: WindUp
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 10c61ba28551fee4db4c9e5594742dc6, type: 3}
+  - {fileID: 21300000, guid: 8a103b9c4ce678d439e041c9c749fd3e, type: 3}
+  - {fileID: 21300000, guid: b82c081a2bd0add448943d30202aa8e2, type: 3}
+  - {fileID: 21300000, guid: f51dd375051791d48900dbe8e65fa672, type: 3}
+  - {fileID: 21300000, guid: 931c9d2a14bf1674ca514b35fab35b27, type: 3}
+  - {fileID: 21300000, guid: fc8b48e32e67dcd459493596a125bdb9, type: 3}
+  - {fileID: 21300000, guid: 765771345aa4392499d174f1b2bca896, type: 3}
+  - {fileID: 21300000, guid: 6c61907c1c7b74844ba7b0d8da3eb865, type: 3}

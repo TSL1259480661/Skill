@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// 获取玩家商城信息请求
+//ResponseType = UserShopInfoResp
+//MessageVerb = POST
+//GameUrlOpcode = api/shop/info
+message UserShopInfoReq // IRequest
+{
+}
+
+// 获取玩家商城信息的响应
+message UserShopInfoResp // IResponse
+{
+  repeated GoodsInfoDto goodsInfos = 1; // 玩家已购买的兑换商品
+  repeated GachaInfoDto gachaInfos = 2; // 玩家已购买的卡池商品
+}
+
+message GoodsInfoDto
+{
+  int32 cid = 1; // 商品配置id
+  int32 purchasedCount = 2; // 限购周期内已购买次数
+  int64 purchasedTotal = 3; // 历史已购买次数
+  //  int32 adsViewedToday = 2; // 今日已查看广告次数
+}
+
+message GachaInfoDto
+{
+  int32 cid = 1; // 商品配置id
+  int64 purchasedInPast = 2; // 历史已抽卡次数
+  //  int32 purchasedToday = 2; // 今日已购买次数
+  //  int32 adsViewedToday = 2; // 今日已查看广告次数
+}
+
+
+// 玩家商城购买请求
+//ResponseType = ShopPurchaseResp
+//MessageVerb = POST
+//GameUrlOpcode = api/shop/purchase
+message ShopPurchaseReq // IRequest
+{
+  int32 cid = 1; // 商品配置id
+  //  bool byAds = 2; // 是否通过广告购买
+}
+
+// 玩家商城购买响应
+message ShopPurchaseResp // IResponse
+{
+  repeated RoleItemChangeDto changes = 1; // 玩家道具的变动
+}
+
+// 玩家宝石抽奖购买请求
+//ResponseType = GachaPurchaseResp
+//MessageVerb = POST
+//GameUrlOpcode = api/shop/gacha/purchase
+message GachaPurchaseReq // IRequest
+{
+  int32 cid = 1; // 抽奖配置id
+  int32 drawNum = 2; // 抽取次数
+  int32 drawType = 3; // 1: 钻石 2: 道具
+}
+
+// 玩家宝石抽奖响应
+message GachaPurchaseResp // IResponse
+{
+  repeated RoleItemChangeDto changes = 1; // 玩家道具的变动
+}
+
+// 玩家获取超值月卡内容物的请求
+//ResponseType = GainPeriodicRewardsResp
+//MessageVerb = POST
+//GameUrlOpcode = api/shop/periodic/rewards
+message GainPeriodicRewardsReq // IRequest
+{
+}
+
+// 玩家获取超值月卡内容物的响应
+message GainPeriodicRewardsResp // IResponse
+{
+  repeated RoleItemChangeDto changes = 1; // 玩家道具的变动
+}

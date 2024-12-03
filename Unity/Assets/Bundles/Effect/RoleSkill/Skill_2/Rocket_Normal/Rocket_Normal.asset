@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Rocket_Normal
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 5ed3e47f2f56fc24895069e76361b782, type: 3}
+  - {fileID: 21300000, guid: 18b481f419b60e34c92c4927e92ec51f, type: 3}
+  - {fileID: 21300000, guid: a19d2d9f33cabc34580609feef549273, type: 3}
+  - {fileID: 21300000, guid: c8ab2befa6568b541a25a0216f75275a, type: 3}
+  - {fileID: 21300000, guid: af76655bcf2e8ae43a3e4dc4e75d9cbf, type: 3}
+  - {fileID: 21300000, guid: abfdc4806040e364ba675df6c051a988, type: 3}
+  - {fileID: 21300000, guid: 15336d57e76c47b4d80600493cfa2180, type: 3}
+  - {fileID: 21300000, guid: 1fc79eb12dbda7748b757513703e8e8f, type: 3}
+  - {fileID: 21300000, guid: c637a67f68f01564a843aad8e694bb7b, type: 3}
+  - {fileID: 21300000, guid: 6878c45089ccb7d4bac232fcce968d20, type: 3}
+  - {fileID: 21300000, guid: 5b998c2f85b8a534387856f27090c287, type: 3}
+  - {fileID: 21300000, guid: c931a18abbf44d947bbbc13eab9cbf97, type: 3}
+  - {fileID: 21300000, guid: 4162f6724742a524d968086b1022e526, type: 3}
+  - {fileID: 21300000, guid: 1d575dde0a9a58f4c8661586691ab983, type: 3}
+  - {fileID: 21300000, guid: e5ead01a319f7984b8332939a8841cf9, type: 3}
+  - {fileID: 21300000, guid: 68f3e7d8be6e0d14eac4ef713f323164, type: 3}

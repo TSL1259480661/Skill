@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Move
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: c66b1255dc1e32a47a6e91c4ebc89191, type: 3}
+    - {fileID: 2800000, guid: cc1c80c4879f7fb4bb9e3145fb32fc5c, type: 3}
+    - {fileID: 2800000, guid: d35f9dc43dd836442947277be27366e9, type: 3}
+    - {fileID: 2800000, guid: c2b48e5f63b6a684191d6e9340841b88, type: 3}
+    - {fileID: 2800000, guid: ed053370d328d474eb6d397984a1fbb1, type: 3}
+    - {fileID: 2800000, guid: d752ce870f814e84d9a45deb1284dc85, type: 3}
+    - {fileID: 2800000, guid: f17312c5b1371394cb7ea8911e7a3cd7, type: 3}
+    - {fileID: 2800000, guid: b896e28e280ccf64b85fa911a8ffd231, type: 3}
+    - {fileID: 2800000, guid: 4bf941c7feb06fd43941e1bde1c78fee, type: 3}
+    - {fileID: 2800000, guid: 7f61779d818a10e4dbaf6465566a8fb8, type: 3}
+    - {fileID: 2800000, guid: 5c667dc5f5356634cb13251d4484ad09, type: 3}
+    - {fileID: 2800000, guid: 8181fa4d8da9b0543aa9fccffd8c1d87, type: 3}
+    - {fileID: 2800000, guid: f99bafd0055aa6044a17610019eb774f, type: 3}
+    - {fileID: 2800000, guid: 77d88d25b411db648b07bc5267a185ae, type: 3}
+    - {fileID: 2800000, guid: 76481c76ff041d34280926c0561b8b27, type: 3}
+    - {fileID: 2800000, guid: d484fc48e9bfa68499a696078ded5228, type: 3}
+    - {fileID: 2800000, guid: 29fdeb20f040e3c46b87a6adb30d06a8, type: 3}
+    - {fileID: 2800000, guid: 457d5f4bc8dc3d64199bb3e649c65da1, type: 3}
+    - {fileID: 2800000, guid: 273972d9565e0a446b65696f5dcd726a, type: 3}
+    - {fileID: 2800000, guid: 2d294c9fde1578f4abde491dc5bdfe51, type: 3}
+    - {fileID: 2800000, guid: e3600193dee75a54eb258a575bead74e, type: 3}
+    - {fileID: 2800000, guid: 082317dc0ff67b44b9c4e00eb315657a, type: 3}
+    - {fileID: 2800000, guid: 09120b7257afdd1489376048bc32030e, type: 3}
+    - {fileID: 2800000, guid: 161f15fc041d0ee4e907f0eb4f86c592, type: 3}
+    - {fileID: 2800000, guid: da37e956c9a9da0498bf2d40eb8ed2b3, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 29fdeb20f040e3c46b87a6adb30d06a8: 21300000
+    - ed053370d328d474eb6d397984a1fbb1: 21300000
+    - f99bafd0055aa6044a17610019eb774f: 21300000
+    - 09120b7257afdd1489376048bc32030e: 21300000
+    - e3600193dee75a54eb258a575bead74e: 21300000
+    - cc1c80c4879f7fb4bb9e3145fb32fc5c: 21300000
+    - d35f9dc43dd836442947277be27366e9: 21300000
+    - 77d88d25b411db648b07bc5267a185ae: 21300000
+    - c66b1255dc1e32a47a6e91c4ebc89191: 21300000
+    - f17312c5b1371394cb7ea8911e7a3cd7: 21300000
+    - 5c667dc5f5356634cb13251d4484ad09: 21300000
+    - da37e956c9a9da0498bf2d40eb8ed2b3: 21300000
+    - 76481c76ff041d34280926c0561b8b27: 21300000
+    - d752ce870f814e84d9a45deb1284dc85: 21300000
+    - 4bf941c7feb06fd43941e1bde1c78fee: 21300000
+    - d484fc48e9bfa68499a696078ded5228: 21300000
+    - 273972d9565e0a446b65696f5dcd726a: 21300000
+    - 457d5f4bc8dc3d64199bb3e649c65da1: 21300000
+    - 082317dc0ff67b44b9c4e00eb315657a: 21300000
+    - 161f15fc041d0ee4e907f0eb4f86c592: 21300000
+    - 8181fa4d8da9b0543aa9fccffd8c1d87: 21300000
+    - 7f61779d818a10e4dbaf6465566a8fb8: 21300000
+    - b896e28e280ccf64b85fa911a8ffd231: 21300000
+    - c2b48e5f63b6a684191d6e9340841b88: 21300000
+    - 2d294c9fde1578f4abde491dc5bdfe51: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 29fdeb20f040e3c46b87a6adb30d06a8, type: 3}
+  - {fileID: 21300000, guid: ed053370d328d474eb6d397984a1fbb1, type: 3}
+  - {fileID: 21300000, guid: f99bafd0055aa6044a17610019eb774f, type: 3}
+  - {fileID: 21300000, guid: 09120b7257afdd1489376048bc32030e, type: 3}
+  - {fileID: 21300000, guid: e3600193dee75a54eb258a575bead74e, type: 3}
+  - {fileID: 21300000, guid: cc1c80c4879f7fb4bb9e3145fb32fc5c, type: 3}
+  - {fileID: 21300000, guid: d35f9dc43dd836442947277be27366e9, type: 3}
+  - {fileID: 21300000, guid: 77d88d25b411db648b07bc5267a185ae, type: 3}
+  - {fileID: 21300000, guid: c66b1255dc1e32a47a6e91c4ebc89191, type: 3}
+  - {fileID: 21300000, guid: f17312c5b1371394cb7ea8911e7a3cd7, type: 3}
+  - {fileID: 21300000, guid: 5c667dc5f5356634cb13251d4484ad09, type: 3}
+  - {fileID: 21300000, guid: da37e956c9a9da0498bf2d40eb8ed2b3, type: 3}
+  - {fileID: 21300000, guid: 76481c76ff041d34280926c0561b8b27, type: 3}
+  - {fileID: 21300000, guid: d752ce870f814e84d9a45deb1284dc85, type: 3}
+  - {fileID: 21300000, guid: 4bf941c7feb06fd43941e1bde1c78fee, type: 3}
+  - {fileID: 21300000, guid: d484fc48e9bfa68499a696078ded5228, type: 3}
+  - {fileID: 21300000, guid: 273972d9565e0a446b65696f5dcd726a, type: 3}
+  - {fileID: 21300000, guid: 457d5f4bc8dc3d64199bb3e649c65da1, type: 3}
+  - {fileID: 21300000, guid: 082317dc0ff67b44b9c4e00eb315657a, type: 3}
+  - {fileID: 21300000, guid: 161f15fc041d0ee4e907f0eb4f86c592, type: 3}
+  - {fileID: 21300000, guid: 8181fa4d8da9b0543aa9fccffd8c1d87, type: 3}
+  - {fileID: 21300000, guid: 7f61779d818a10e4dbaf6465566a8fb8, type: 3}
+  - {fileID: 21300000, guid: b896e28e280ccf64b85fa911a8ffd231, type: 3}
+  - {fileID: 21300000, guid: c2b48e5f63b6a684191d6e9340841b88, type: 3}
+  - {fileID: 21300000, guid: 2d294c9fde1578f4abde491dc5bdfe51, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - move0016
+  - move0004
+  - move0012
+  - move0022
+  - move0020
+  - move0001
+  - move0002
+  - move0013
+  - move0000
+  - move0006
+  - move0010
+  - move0024
+  - move0014
+  - move0005
+  - move0008
+  - move0015
+  - move0018
+  - move0017
+  - move0021
+  - move0023
+  - move0011
+  - move0009
+  - move0007
+  - move0003
+  - move0019
+  m_RenderDataMap: {}
+  m_Tag: Move
+  m_IsVariant: 0

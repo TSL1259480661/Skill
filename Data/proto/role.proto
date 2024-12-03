@@ -1,0 +1,208 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// 获取玩家基础信息请求
+//ResponseType = GetRoleInfoResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/info
+message GetRoleInfoReq // IRequest
+{
+}
+
+// 获取玩家基础信息响应
+message GetRoleInfoResp // IResponse
+{
+  // 玩家基础信息
+  RoleDto baseInfo = 1;
+  // 体力恢复时间戳（毫秒）
+  int64 lastStaminaRecoverTime = 2;
+}
+
+// 玩家体力值检查请求
+//ResponseType = CheckStaminaResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/check_stamina
+message CheckStaminaReq // IRequest
+{
+}
+
+// 玩家体力值检查响应
+message CheckStaminaResp // IResponse
+{
+  // 玩家所有体力资源信息
+  RoleItemDto stamina = 1;
+  // 体力恢复时间戳（毫秒）
+  int64 lastStaminaRecoverTime = 2;
+}
+
+message RoleDto
+{
+  int64 id = 1;
+  // 昵称
+  string nickname = 2;
+  // 头像
+  string avatar = 3;
+  // 玩家等级
+  int32 level = 4;
+  // 玩家本日扫荡剩余次数
+  int32 leftSweepCount = 5;
+  // 玩家当前使用的宝石预设页数
+  int32 gemPreset = 6;
+  // 玩家当前已通过的最高关卡
+  int32 maxCombatLevel = 7;
+}
+
+// 玩家账号删除请求
+//ResponseType = SelfDeletionResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/self_deletion
+message SelfDeletionReq // IRequest
+{
+}
+
+// 玩家账号删除响应
+message SelfDeletionResp // IResponse
+{
+}
+
+// 保存宝石预设请求
+//ResponseType = SaveGemPresetResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/save_gem_preset
+message SaveGemPresetReq // IRequest
+{
+  // 需要保存的装备预设页数
+  int32 preset = 1;
+}
+
+// 保存宝石预设响应
+message SaveGemPresetResp // IResponse
+{
+}
+
+// 心跳请求
+//ResponseType = HeartBeatResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/heartbeat
+message HeartBeatReq // IRequest
+{
+}
+
+message HeartBeatResp // IResponse
+{
+  int64 serverTime = 1;
+}
+
+// 问卷奖励领取请求
+//ResponseType = QuestionnaireRewardResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/questionnaire_reward
+message QuestionnaireRewardReq // IRequest
+{
+  // 问卷id
+  string quizId = 1;
+  // 操作 1:填完问卷 2：领取奖励
+  int32 operation = 2;
+}
+
+// 问卷奖励领取响应
+message QuestionnaireRewardResp // IResponse
+{
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+// 问卷状态查询接口
+//ResponseType = QuestionnaireStatusResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/questionnaire_status
+message QuestionnaireStatusReq // IRequest
+{
+  // 问卷id
+  repeated string quizIds = 1;
+}
+
+// 问卷状态查询接口
+message QuestionnaireStatusResp // IResponse
+{
+  repeated QuizStatusDto statuses = 1;
+}
+
+message QuizStatusDto
+{
+  string quizId = 1;
+  // 0:未完成 1:可领取 2：已领取
+  int32 status = 2;
+}
+
+message VipDto
+{
+  PeriodicRewardDto vipWithRewardInfo = 1;
+  PeriodicPrivilegeDto vipWithPrivilegeInfo = 2;
+  PeriodicPrivilegeDto vipWithPrivilegeExpInfo = 3; // 特权体验卡
+}
+
+message PeriodicRewardDto
+{
+  // 过期时间戳，utc时间，单位毫秒
+  int64 expireTime = 1;
+  // 本日奖励是否已领取 true：已领取；false：未领取
+  bool receivedToday = 2;
+}
+
+message PeriodicPrivilegeDto
+{
+  // 过期时间戳，utc时间，单位毫秒
+  int64 expireTime = 1;
+}
+
+// 获取玩家月卡信息请求
+//ResponseType = GetVipInfoResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/vip/info
+message GetVipInfoReq // IRequest
+{
+}
+
+// 获取玩家基础信息响应
+message GetVipInfoResp // IResponse
+{
+  // 玩家vip信息
+  VipDto vipInfo = 1;
+}
+
+// 同步用户昵称请求
+//ResponseType = ChgNicknameResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/chg_nickname
+message ChgNicknameReq // IRequest
+{
+  // 用户昵称
+  string nickname = 1;
+}
+
+// 同步用户昵称响应
+message ChgNicknameResp // IResponse
+{
+  bool success = 1;
+}
+
+// 同步用户头像请求
+//ResponseType = ChgAvatarResp
+//MessageVerb = POST
+//GameUrlOpcode = api/role/chg_avatar
+message ChgAvatarReq // IRequest
+{
+  // 用户头像
+  string avatar = 1;
+}
+
+// 同步用户头像响应
+message ChgAvatarResp // IResponse
+{
+  bool success = 1;
+}

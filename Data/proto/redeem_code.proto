@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// 兑换码使用请求
+//ResponseType = UseRedeemCodeResp
+//MessageVerb = POST
+//GameUrlOpcode = api/redeem_code/use
+message UseRedeemCodeReq // IRequest
+{
+  // 兑换码
+  string code = 1;
+}
+
+// 兑换码使用响应
+message UseRedeemCodeResp // IResponse
+{
+  // 获取的奖励
+  repeated RoleItemChangeDto rewards = 1;
+}

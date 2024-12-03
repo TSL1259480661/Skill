@@ -1,0 +1,145 @@
+syntax = "proto3";
+
+import "item.proto";
+package transfer;
+
+option go_package = "./transfer";
+
+
+//请求任务列表
+//ResponseType = GetTaskResp
+//MessageVerb = POST
+//GameUrlOpcode = api/task/period/list
+message GetTaskReq  // IRequest
+{
+  // 1=日 2=周 4=新人
+  TaskType taskType = 1;
+}
+
+// 响应任务列表
+message GetTaskResp // IResponse
+{
+  // 1=日 2=周 4=新人
+  TaskType taskType = 1;
+  // 任务列表
+  repeated TaskDto tasks = 2;
+  // 活跃度进度
+  repeated TaskDto activeTasks = 3;
+}
+
+//请求领取奖励
+//ResponseType = RewardTaskResp
+//MessageVerb = POST
+//GameUrlOpcode = api/task/period/reward
+message RewardTaskReq  // IRequest
+{
+  // 任务配置id
+  int32 cid = 1;
+  // 领取类型 0=任务奖励 1=活跃度进度奖励
+  RewardType rewardType = 2;
+}
+
+// 响应领取奖励
+message RewardTaskResp // IResponse
+{
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+//请求批量领取奖励
+//ResponseType = BatchRewardTaskResp
+//MessageVerb = POST
+//GameUrlOpcode = api/task/period/reward/batch
+message BatchRewardTaskReq  // IRequest
+{
+  // 任务配置id
+  repeated int32 cids = 1;
+  // 领取类型 0：任务奖励 1：活跃度进度奖励
+  RewardType rewardType = 2;
+}
+
+// 响应领取奖励
+message BatchRewardTaskResp // IResponse
+{
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+// 任务信息
+message TaskDto
+{
+  int32 cid = 1;
+  int32 progress = 2;
+  bool isReward = 3;
+  // 更新时间戳（毫秒）
+  int64 updateTime = 4;
+}
+
+//请求主线任务
+//ResponseType = GetMainTaskResp
+//MessageVerb = POST
+//GameUrlOpcode = api/task/main/list
+message GetMainTaskReq // IRequest
+{
+}
+
+// 响应主线任务
+message GetMainTaskResp // IResponse
+{
+  // 任务列表
+  repeated TaskDto tasks = 1;
+}
+
+//请求领取奖励
+//ResponseType = RewardMainTaskResp
+//MessageVerb = POST
+//GameUrlOpcode = api/task/main/reward
+message RewardMainTaskReq  // IRequest
+{
+  int32 cid = 1;
+}
+
+// 响应领取奖励
+message RewardMainTaskResp // IResponse
+{
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+//请求批量领取奖励
+//ResponseType = BatchRewardMainTaskResp
+//MessageVerb = POST
+//GameUrlOpcode = api/task/main/reward/batch
+message BatchRewardMainTaskReq  // IRequest
+{
+  repeated int32 cid = 1;
+}
+
+// 响应领取奖励
+message BatchRewardMainTaskResp // IResponse
+{
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+enum RewardType
+{
+  // 任务奖励
+  Task = 0;
+  // 活跃度进度奖励
+  Active = 1;
+  // 累充任务奖励
+  Recharge = 2;
+}
+
+enum TaskType
+{
+  //
+  Stub = 0;
+  // 日常任务
+  Day = 1;
+  // 周常任务
+  Week = 2;
+  // 主线任务
+  Main = 3;
+  // 新人任务
+  New = 4;
+  // 累充任务
+  RechargeReward = 5;
+}

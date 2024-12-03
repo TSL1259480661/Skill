@@ -1,0 +1,17 @@
+root = true
+[*.cs]
+charset = utf-8
+#缩进风格符号 space\tab
+indent_style = tab
+indent_size = 4
+tab_width = 4
+#换行符 lf, crlf, cr
+end_of_line = crlf
+#表示文件是否应该以换行符结尾
+insert_final_newline = true
+#表示大括号的左边部分是否应该在下一行
+curly_bracket_next_line = true
+
+
+
+

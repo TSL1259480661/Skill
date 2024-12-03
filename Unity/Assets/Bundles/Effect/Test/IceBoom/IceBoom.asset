@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: IceBoom
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 6ea696c42d3b3a145a61af945264ee9a, type: 3}
+  - {fileID: 21300000, guid: 618d2095bac8253418ce0e66863bbdcd, type: 3}
+  - {fileID: 21300000, guid: 8b513693af85d9f4c8876c43f05c5309, type: 3}
+  - {fileID: 21300000, guid: 8716b37ca172768449f74149fbfaa1f8, type: 3}
+  - {fileID: 21300000, guid: fa4e2e3866289d64497558b10f6b005a, type: 3}
+  - {fileID: 21300000, guid: 9f855e60e710e2f49a3f7f4f208dc020, type: 3}
+  - {fileID: 21300000, guid: 180d5686bc2bf4a4ca1f3156a2933102, type: 3}
+  - {fileID: 21300000, guid: fce2a1c6b83ee714488972fb86ca5f04, type: 3}
+  - {fileID: 21300000, guid: 4a4f78eff6f4d5a4aa742afa26c764e6, type: 3}
+  - {fileID: 21300000, guid: 3f183d33d3145d940bdea22adc97761b, type: 3}
+  - {fileID: 21300000, guid: 680b406b0b78be14c84173da6bad3959, type: 3}
+  - {fileID: 21300000, guid: 164c7ee9a6d87c04c824ddedd98a5165, type: 3}

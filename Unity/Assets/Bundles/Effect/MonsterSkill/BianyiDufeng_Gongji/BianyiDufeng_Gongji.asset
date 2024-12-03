@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: BianyiDufeng_Gongji
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 087d0076ceb2e5c4c8663314ac809da0, type: 3}
+  - {fileID: 21300000, guid: 50523e0ed0d2c21439a123321646e9de, type: 3}
+  - {fileID: 21300000, guid: 012b19b6c908d4c4eaf745b316692cbe, type: 3}
+  - {fileID: 21300000, guid: 3698368b6d3aaab49ab6ebbb485cb1dc, type: 3}
+  - {fileID: 21300000, guid: 71505e9d539767f4498e3275a659490c, type: 3}
+  - {fileID: 21300000, guid: 572371f9c00b8ab49a75bb96e91a6ede, type: 3}
+  - {fileID: 21300000, guid: 8838955fca191944ca88f7c56714e3a5, type: 3}
+  - {fileID: 21300000, guid: eb0461169f994cc428b88f3e4cc1ce66, type: 3}
+  - {fileID: 21300000, guid: eece16d33607b5e43b9293ce71de98f1, type: 3}
+  - {fileID: 21300000, guid: 4b020b3097292724ea8f688706c3e8fb, type: 3}

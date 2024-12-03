@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package transfer;
+
+option go_package = "./transfer";
+
+enum BiReportType
+{
+  BiReportNone = 0; // 默认值
+  BiReportAd = 1; // 广告相关
+  BiReportPay = 2; // 支付相关
+  BiReportSkillChoice = 3; // 技能选择相关
+  BiReportBeforeLogin = 4; // 登录前相关
+}
+
+message reportDto
+{
+  string reportData = 1; // 上报的具体内容 json格式
+  BiReportType biType = 2; // 上报的类型 1：广告相关；2：支付相关
+}
+
+// bi埋点上报请求
+//ResponseType = BiReportsResponse
+//MessageVerb = POST
+//GameUrlOpcode = api/bi/reports
+message BiReportsReq // IRequest
+{
+  repeated reportDto actions = 1; // 多个上报埋点
+}
+
+// bi埋点多个上报响应
+message BiReportsResponse // IResponse
+{
+}

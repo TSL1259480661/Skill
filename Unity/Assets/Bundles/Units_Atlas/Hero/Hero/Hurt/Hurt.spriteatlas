@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hurt
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: a667c4b901c1ad7438fe8fe2fc2f4cb6, type: 3}
+    - {fileID: 2800000, guid: 913e7800d76517c42bcf1d61c13237fd, type: 3}
+    - {fileID: 2800000, guid: 229acc99b68ce25429be7f71b4b33f07, type: 3}
+    - {fileID: 2800000, guid: 8fe1e9a044abd9f41a400e88249928ab, type: 3}
+    - {fileID: 2800000, guid: a124d407a5059134eb44ad16d9a56b9b, type: 3}
+    - {fileID: 2800000, guid: ab66fd118798bc1478cbd880c76e1f79, type: 3}
+    - {fileID: 2800000, guid: 2bdf64369b5ea4b4faf15d9a23c9b1d7, type: 3}
+    - {fileID: 2800000, guid: 37add6440080b5b49aba0c58d766617a, type: 3}
+    - {fileID: 2800000, guid: 50e2486b858de9549a342d94931fc3ca, type: 3}
+    - {fileID: 2800000, guid: 9927d532540ce694890808b675d7a6cb, type: 3}
+    - {fileID: 2800000, guid: 6abed2a475394bf4d8f4b6532259d737, type: 3}
+    - {fileID: 2800000, guid: 9a3dba6b9816fe849bf532ca95e0cb56, type: 3}
+    - {fileID: 2800000, guid: 9996062fc91ea064ea51dfed65a6751d, type: 3}
+    - {fileID: 2800000, guid: 7b716af64fd8a85439c411264bb42c37, type: 3}
+    - {fileID: 2800000, guid: 490b79e0baae0584fbee04a399cea5b4, type: 3}
+    - {fileID: 2800000, guid: ec1adb6393a59d047ad7bbea4a45e9a6, type: 3}
+    - {fileID: 2800000, guid: 39506fa7ac5684e4f970c6205483d729, type: 3}
+    - {fileID: 2800000, guid: 96b4a31d398af3341b4e88bb86cddb4b, type: 3}
+    - {fileID: 2800000, guid: 1b135a0faf3fdf84ba952f4c03c3c473, type: 3}
+    - {fileID: 2800000, guid: fa16c91a4b4ee184192c37abb610eeed, type: 3}
+    - {fileID: 2800000, guid: 859d9fba19145af4f98890cc14a28b4b, type: 3}
+    - {fileID: 2800000, guid: 78626a8105a3b044190880c0062600bb, type: 3}
+    - {fileID: 2800000, guid: ecafd3ec9a046f347b4d20c859f3be3f, type: 3}
+    - {fileID: 2800000, guid: 26189caa81c0ac946b7c684efd37eceb, type: 3}
+    - {fileID: 2800000, guid: 57172f4904f84f548bdea1473bde9546, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 913e7800d76517c42bcf1d61c13237fd: 21300000
+    - 8fe1e9a044abd9f41a400e88249928ab: 21300000
+    - 490b79e0baae0584fbee04a399cea5b4: 21300000
+    - ab66fd118798bc1478cbd880c76e1f79: 21300000
+    - 78626a8105a3b044190880c0062600bb: 21300000
+    - 9927d532540ce694890808b675d7a6cb: 21300000
+    - ec1adb6393a59d047ad7bbea4a45e9a6: 21300000
+    - 37add6440080b5b49aba0c58d766617a: 21300000
+    - 6abed2a475394bf4d8f4b6532259d737: 21300000
+    - 2bdf64369b5ea4b4faf15d9a23c9b1d7: 21300000
+    - 7b716af64fd8a85439c411264bb42c37: 21300000
+    - a124d407a5059134eb44ad16d9a56b9b: 21300000
+    - 39506fa7ac5684e4f970c6205483d729: 21300000
+    - 57172f4904f84f548bdea1473bde9546: 21300000
+    - 229acc99b68ce25429be7f71b4b33f07: 21300000
+    - a667c4b901c1ad7438fe8fe2fc2f4cb6: 21300000
+    - fa16c91a4b4ee184192c37abb610eeed: 21300000
+    - 26189caa81c0ac946b7c684efd37eceb: 21300000
+    - 859d9fba19145af4f98890cc14a28b4b: 21300000
+    - 50e2486b858de9549a342d94931fc3ca: 21300000
+    - 9a3dba6b9816fe849bf532ca95e0cb56: 21300000
+    - ecafd3ec9a046f347b4d20c859f3be3f: 21300000
+    - 96b4a31d398af3341b4e88bb86cddb4b: 21300000
+    - 1b135a0faf3fdf84ba952f4c03c3c473: 21300000
+    - 9996062fc91ea064ea51dfed65a6751d: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 913e7800d76517c42bcf1d61c13237fd, type: 3}
+  - {fileID: 21300000, guid: 8fe1e9a044abd9f41a400e88249928ab, type: 3}
+  - {fileID: 21300000, guid: 490b79e0baae0584fbee04a399cea5b4, type: 3}
+  - {fileID: 21300000, guid: ab66fd118798bc1478cbd880c76e1f79, type: 3}
+  - {fileID: 21300000, guid: 78626a8105a3b044190880c0062600bb, type: 3}
+  - {fileID: 21300000, guid: 9927d532540ce694890808b675d7a6cb, type: 3}
+  - {fileID: 21300000, guid: ec1adb6393a59d047ad7bbea4a45e9a6, type: 3}
+  - {fileID: 21300000, guid: 37add6440080b5b49aba0c58d766617a, type: 3}
+  - {fileID: 21300000, guid: 6abed2a475394bf4d8f4b6532259d737, type: 3}
+  - {fileID: 21300000, guid: 2bdf64369b5ea4b4faf15d9a23c9b1d7, type: 3}
+  - {fileID: 21300000, guid: 7b716af64fd8a85439c411264bb42c37, type: 3}
+  - {fileID: 21300000, guid: a124d407a5059134eb44ad16d9a56b9b, type: 3}
+  - {fileID: 21300000, guid: 39506fa7ac5684e4f970c6205483d729, type: 3}
+  - {fileID: 21300000, guid: 57172f4904f84f548bdea1473bde9546, type: 3}
+  - {fileID: 21300000, guid: 229acc99b68ce25429be7f71b4b33f07, type: 3}
+  - {fileID: 21300000, guid: a667c4b901c1ad7438fe8fe2fc2f4cb6, type: 3}
+  - {fileID: 21300000, guid: fa16c91a4b4ee184192c37abb610eeed, type: 3}
+  - {fileID: 21300000, guid: 26189caa81c0ac946b7c684efd37eceb, type: 3}
+  - {fileID: 21300000, guid: 859d9fba19145af4f98890cc14a28b4b, type: 3}
+  - {fileID: 21300000, guid: 50e2486b858de9549a342d94931fc3ca, type: 3}
+  - {fileID: 21300000, guid: 9a3dba6b9816fe849bf532ca95e0cb56, type: 3}
+  - {fileID: 21300000, guid: ecafd3ec9a046f347b4d20c859f3be3f, type: 3}
+  - {fileID: 21300000, guid: 96b4a31d398af3341b4e88bb86cddb4b, type: 3}
+  - {fileID: 21300000, guid: 1b135a0faf3fdf84ba952f4c03c3c473, type: 3}
+  - {fileID: 21300000, guid: 9996062fc91ea064ea51dfed65a6751d, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - hit0001
+  - hit0003
+  - hit0014
+  - hit0005
+  - hit0021
+  - hit0009
+  - hit0015
+  - hit0007
+  - hit0010
+  - hit0006
+  - hit0013
+  - hit0004
+  - hit0016
+  - hit0024
+  - hit0002
+  - hit0000
+  - hit0019
+  - hit0023
+  - hit0020
+  - hit0008
+  - hit0011
+  - hit0022
+  - hit0017
+  - hit0018
+  - hit0012
+  m_RenderDataMap: {}
+  m_Tag: Hurt
+  m_IsVariant: 0

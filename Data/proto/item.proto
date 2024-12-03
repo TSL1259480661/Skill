@@ -1,0 +1,135 @@
+syntax = "proto3";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// RoleItemDto represents information about a role item.
+// 背包物品信息
+message RoleItemDto
+{
+  // 物品id
+  int64 id = 1;
+  // 物品配置id
+  int32 cid = 2;
+  // 所属角色id
+  int64 roleId = 3;
+  // 物品数量
+  int64 num = 4;
+  // 物品类型 1=道具 2=货币 3=掉落（暂时不用）
+  int32 type = 5;
+}
+
+// RoleItemChangeDto represents changes in a role item.
+// 物品更改信息，在背包物品发生增减后返回
+message RoleItemChangeDto
+{
+  // 物品配置id
+  int32 cid = 1;
+  // 所属角色id
+  int64 roleId = 2;
+  // 物品数量
+  int64 num = 3;
+  // 物品类型 1=道具 2=货币 3=掉落（暂时不用）
+  int32 type = 4;
+  // 物品增减标识，true为增加，false为减少
+  bool inc = 5;
+  int64 before = 6;
+  int64 after = 7;
+  EquipSnapshot equipSnapshot = 8;
+}
+
+message EquipSnapshot
+{
+  int64 id = 1;
+  int32 enhanceCid = 2;
+  int32 forgeCid = 3;
+  repeated EquipAttrSnapshot attrs = 4;
+}
+
+message EquipAttrSnapshot
+{
+  int32 cid = 1;
+  float value = 2;
+  int32 eType = 3;
+}
+
+//UseItemReq represents the request structure for using an item. 消耗单个道具接口
+//ResponseType = UseItemResp
+//MessageVerb = POST
+//GameUrlOpcode = api/item/use
+message UseItemReq // IRequest
+{
+  repeated ChangeItemDto items = 1;
+}
+
+//UseItemResp represents the response structure for using an item.
+message UseItemResp // IResponse
+{
+  repeated RoleItemChangeDto changes = 1;
+}
+
+//AddItemReq represents the request structure for adding an item. 添加单个道具接口
+//ResponseType = AddItemResp
+//MessageVerb = POST
+//GameUrlOpcode = api/item/add
+message AddItemReq // IRequest
+{
+  repeated ChangeItemDto items = 1;
+}
+
+//AddItemResp represents the response structure for adding an item.
+message AddItemResp // IResponse
+{
+  repeated RoleItemChangeDto changes = 1;
+}
+
+// 按类型获取玩家背包物品请求
+//ResponseType = GetRoleItemsResp
+//MessageVerb = POST
+//GameUrlOpcode = api/item/list
+message GetRoleItemsReq // IRequest
+{
+  // 物品类型 1=道具 2=货币
+  int32 itemType = 1;
+  // 物品子类型。不填查询所有子类型
+  // itemType=1时，子类型为道具类型 subtype传Item_Desc#Type
+  // itemType=2时，子类型为货币类型 subtype传Money_Desc#Id
+  // itemType不能=3
+  repeated int32 subtypes = 2;
+}
+
+
+// 按类型获取玩家背包物品响应
+message GetRoleItemsResp // IResponse
+{
+  // 玩家背包中指定类型的物品信息
+  repeated RoleItemDto items = 1;
+}
+
+// 测试box
+//ResponseType = UseUserPickBoxResp
+//MessageVerb = POST
+//GameUrlOpcode = api/item/pick_test
+message PickTestReq // IRequest
+{
+  // 宝箱配置id
+  int32 itemCid = 1;
+  // 自选索引，从0开始
+  int32 pickNum = 2;
+}
+
+message PickTestResp // IResponse
+{
+  repeated ChangeItemDto result = 1;
+}
+
+message ChangeItemDto
+{
+  // 物品配置id
+  int32 cid = 1;
+  // 物品类型 1=道具 2=货币 3=掉落
+  int32 type = 2;
+  // 物品数量
+  int64 num = 3;
+}

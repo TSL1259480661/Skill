@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Board
+  - Water
+  - UI
+  - 
+  - Role
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 7
+    locked: 0
+  - name: GroundEffect
+    uniqueID: 3716158143
+    locked: 0
+  - name: Character
+    uniqueID: 2566362663
+    locked: 0
+  - name: CharacterEffect
+    uniqueID: 636830337
+    locked: 0
+  - name: Air
+    uniqueID: 8
+    locked: 0
+  - name: AirEffect
+    uniqueID: 3885312339
+    locked: 0
+  - name: Background
+    uniqueID: 10
+    locked: 0
+  - name: Bottom
+    uniqueID: 11
+    locked: 0
+  - name: Normal
+    uniqueID: 12
+    locked: 0
+  - name: Pop
+    uniqueID: 13
+    locked: 0
+  - name: Top
+    uniqueID: 14
+    locked: 0
+  - name: System
+    uniqueID: 15
+    locked: 0

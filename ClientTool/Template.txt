@@ -1,0 +1,80 @@
+using App;
+using System;
+using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
+using ProtoBuf;
+
+
+namespace ClientData
+{
+    [ProtoContract]
+    public partial class (ConfigName)Category : ProtoObject, IMerge
+    {
+        private static UDebugger debugger = new UDebugger("(ConfigName)");
+		
+        [ProtoIgnore,BsonIgnore]
+        private Dictionary<int, (ConfigName)> dict = new Dictionary<int, (ConfigName)>();
+		
+        [BsonElement]
+        [ProtoMember(1)]
+        private List<(ConfigName)> list = new List<(ConfigName)>();
+		
+        
+        public void Merge(object o)
+        {
+            (ConfigName)Category s = o as (ConfigName)Category;
+            this.list.AddRange(s.list);
+        }
+		
+        public override void EndInit()
+        {
+            foreach ((ConfigName) config in list)
+            {
+                config.EndInit();
+                this.dict.Add(config.id, config);
+            }            
+            this.AfterEndInit();
+        }
+		
+        public (ConfigName) Get(int id)
+        {
+            this.dict.TryGetValue(id, out (ConfigName) item);
+
+            if (item == null)
+            {
+                //throw new Exception($"配置找不到，配置表名: {nameof ((ConfigName))}，配置id: {id}");
+				debugger.LogError($"配置找不到，配置表名: {nameof ((ConfigName))}，配置id: {id}");
+            }
+
+            return item;
+        }
+		
+        public bool Contain(int id)
+        {
+            return this.dict.ContainsKey(id);
+        }
+
+        public Dictionary<int, (ConfigName)> GetAll()
+        {
+            return this.dict;
+        }
+
+        public (ConfigName) GetOne()
+        {
+            if (this.dict == null || this.dict.Count <= 0)
+            {
+                return null;
+            }
+            var enumerator = this.dict.Values.GetEnumerator();
+            enumerator.MoveNext();
+            return enumerator.Current; 
+        }
+    }
+(Structs)
+
+    [ProtoContract]
+	public partial class (ConfigName): ProtoObject, IConfig
+	{
+(Fields)
+	}
+}

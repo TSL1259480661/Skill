@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Skill1Upper
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e6198ae0c97788744b6398b9b1b9ad58, type: 3}
+    - {fileID: 2800000, guid: f7718e73083831947bb8cded9e95ad38, type: 3}
+    - {fileID: 2800000, guid: 1e47bdc236090fc43930548416691076, type: 3}
+    - {fileID: 2800000, guid: 01d6283e13b8b174aa25c17fd104b1e7, type: 3}
+    - {fileID: 2800000, guid: 077b8ae32a1a7164e87b61071672b48e, type: 3}
+    - {fileID: 2800000, guid: c2c5bc855e0c491408cb5f9010bfe9b8, type: 3}
+    - {fileID: 2800000, guid: bbc0bd18f95fdce40a87ff43f339b36c, type: 3}
+    - {fileID: 2800000, guid: 51ee0189dfd0151459ba0227deed8602, type: 3}
+    - {fileID: 2800000, guid: b3839b8f772ed5c44ad7dfbe0dd27691, type: 3}
+    - {fileID: 2800000, guid: 2c0edfc786e65c547957637ec5807eba, type: 3}
+    - {fileID: 2800000, guid: 4f0aed5da8966e0429eab4114fd5e01b, type: 3}
+    - {fileID: 2800000, guid: ac5fce3728ea1654f9e6d668c906b501, type: 3}
+    - {fileID: 2800000, guid: 0b31ccbc5089b964298d97532275a6c1, type: 3}
+    - {fileID: 2800000, guid: 1c2a87793d551ad4ab051b499ba1bcd5, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - e6198ae0c97788744b6398b9b1b9ad58: 21300000
+    - 1e47bdc236090fc43930548416691076: 21300000
+    - f7718e73083831947bb8cded9e95ad38: 21300000
+    - 077b8ae32a1a7164e87b61071672b48e: 21300000
+    - c2c5bc855e0c491408cb5f9010bfe9b8: 21300000
+    - ac5fce3728ea1654f9e6d668c906b501: 21300000
+    - 2c0edfc786e65c547957637ec5807eba: 21300000
+    - bbc0bd18f95fdce40a87ff43f339b36c: 21300000
+    - 1c2a87793d551ad4ab051b499ba1bcd5: 21300000
+    - 51ee0189dfd0151459ba0227deed8602: 21300000
+    - 0b31ccbc5089b964298d97532275a6c1: 21300000
+    - 4f0aed5da8966e0429eab4114fd5e01b: 21300000
+    - 01d6283e13b8b174aa25c17fd104b1e7: 21300000
+    - b3839b8f772ed5c44ad7dfbe0dd27691: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e6198ae0c97788744b6398b9b1b9ad58, type: 3}
+  - {fileID: 21300000, guid: 1e47bdc236090fc43930548416691076, type: 3}
+  - {fileID: 21300000, guid: f7718e73083831947bb8cded9e95ad38, type: 3}
+  - {fileID: 21300000, guid: 077b8ae32a1a7164e87b61071672b48e, type: 3}
+  - {fileID: 21300000, guid: c2c5bc855e0c491408cb5f9010bfe9b8, type: 3}
+  - {fileID: 21300000, guid: ac5fce3728ea1654f9e6d668c906b501, type: 3}
+  - {fileID: 21300000, guid: 2c0edfc786e65c547957637ec5807eba, type: 3}
+  - {fileID: 21300000, guid: bbc0bd18f95fdce40a87ff43f339b36c, type: 3}
+  - {fileID: 21300000, guid: 1c2a87793d551ad4ab051b499ba1bcd5, type: 3}
+  - {fileID: 21300000, guid: 51ee0189dfd0151459ba0227deed8602, type: 3}
+  - {fileID: 21300000, guid: 0b31ccbc5089b964298d97532275a6c1, type: 3}
+  - {fileID: 21300000, guid: 4f0aed5da8966e0429eab4114fd5e01b, type: 3}
+  - {fileID: 21300000, guid: 01d6283e13b8b174aa25c17fd104b1e7, type: 3}
+  - {fileID: 21300000, guid: b3839b8f772ed5c44ad7dfbe0dd27691, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - chuidishangceng_0009
+  - chuidishangceng_0011
+  - chuidishangceng_0010
+  - chuidishangceng_0013
+  - chuidishangceng_0014
+  - chuidishangceng_0020
+  - chuidishangceng_0018
+  - chuidishangceng_0015
+  - chuidishangceng_0022
+  - chuidishangceng_0016
+  - chuidishangceng_0021
+  - chuidishangceng_0019
+  - chuidishangceng_0012
+  - chuidishangceng_0017
+  m_RenderDataMap: {}
+  m_Tag: Skill1Upper
+  m_IsVariant: 0

@@ -1,0 +1,106 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// 发起购买下单请求
+//ResponseType = RechargeResp
+//MessageVerb = POST
+//GameUrlOpcode = api/payment/recharge
+message RechargeReq // IRequest
+{
+  // 充值配置id
+  int32 goodsCid = 1;
+  // 充值渠道 99充值: 99SDK
+  string channel = 2;
+  // 购买参数，暂时不使用
+  string param = 3;
+  // 充值场景
+  RechargeScene scene = 4;
+}
+
+// 发起购买下单响应
+message RechargeResp // IResponse
+{
+  // 充值订单
+  PaymentOrderDto order = 1;
+}
+
+
+// 查询订单状态
+//ResponseType = QueryPaymentOrderResp
+//MessageVerb = POST
+//GameUrlOpcode = api/payment/query
+message QueryPaymentOrderReq // IRequest
+{
+  // 充值订单id
+  int64 orderId = 1;
+}
+
+// 查询订单状态响应
+message QueryPaymentOrderResp // IResponse
+{
+  // 充值订单
+  PaymentOrderDto order = 1;
+}
+
+// 取消支付订单
+//ResponseType = ClosePaymentOrderResp
+//MessageVerb = POST
+//GameUrlOpcode = api/payment/close
+message ClosePaymentOrderReq // IRequest
+{
+  // 充值订单id
+  int64 orderId = 1;
+}
+
+message ClosePaymentOrderResp // IResponse
+{
+  // 充值订单
+  PaymentOrderDto order = 1;
+}
+
+// 服务器订单信息
+message PaymentOrderDto
+{
+  // 订单id
+  int64 id = 1;
+  // 充值配置id
+  int32 cid = 2;
+  // 创建时间
+  int64 createTime = 3;
+  // 订单状态 0:未支付 1:已支付 2:已到账
+  int32 status = 4;
+  // 玩家id
+  int64 rid = 5;
+  // 充值渠道 99SDK: 99充值
+  string channel = 6;
+  // 充值场景
+  RechargeScene scene = 7;
+  // 订单的奖励内容
+  repeated RoleItemChangeDto rewards = 8;
+}
+
+enum RechargeScene
+{
+  // default none
+  NoneScene = 0;
+  // 礼包充值
+  Gift = 1;
+  // 商城充值
+  Mall = 2;
+  // 月卡充值
+  Periodic = 3;
+  // 小猪银行（存钱罐）
+  PiggyBank = 4;
+  // 战令
+  Token = 5;
+  // 限时礼包（客户端触发的）
+  RSLimitedGift = 6;
+  // 限时礼包（充值购买后触发的）
+  RSLimitedGiftInstantly = 7;
+}
+

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Charge
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 9c67887a072298b428572a619f3bf022, type: 3}
+  - {fileID: 21300000, guid: 4219a4b68e0b1344783467552a8124fb, type: 3}
+  - {fileID: 21300000, guid: 187ecab620867f045b652e4645ff82c6, type: 3}
+  - {fileID: 21300000, guid: 46aff3f95082b6d4c91a44de453073bd, type: 3}
+  - {fileID: 21300000, guid: 334cdfface4738843af37e9198a03093, type: 3}
+  - {fileID: 21300000, guid: a7e30b4943ce0f540b38d2ee1ad6615b, type: 3}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Touzhebing_Yinxian
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: cf8c322c6cdd557478f5a9325f04d5c7, type: 3}
+  - {fileID: 21300000, guid: b7570b0861457b945b3e329788d21152, type: 3}
+  - {fileID: 21300000, guid: fd4b463a1057ce341b678802b3b1f65a, type: 3}
+  - {fileID: 21300000, guid: e72d76bc93a683b4591746bfdff19393, type: 3}
+  - {fileID: 21300000, guid: ae8809a8b0d1698458b436dba5af7424, type: 3}
+  - {fileID: 21300000, guid: cde34ce4ecc5781458d0079d1c1c6bfb, type: 3}
+  - {fileID: 21300000, guid: 628c9dc491389f24a941ee468f2bf7ac, type: 3}
+  - {fileID: 21300000, guid: 8319a6eefa0289b4b8a7edfaa648570e, type: 3}
+  - {fileID: 21300000, guid: 64018ce74b710f14caccb724c862905d, type: 3}
+  - {fileID: 21300000, guid: 1cd92630f24e84d41a78c4135634717c, type: 3}
+  - {fileID: 21300000, guid: c5d6bd75a9ed8f64bb627cb8e3e3e20c, type: 3}
+  - {fileID: 21300000, guid: 8c4f2dded28f89941a34ed0a876c277f, type: 3}

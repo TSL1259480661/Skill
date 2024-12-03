@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+
+// 通用服务端响应
+message GenericResponse
+{
+  // 错误信息。成功时为ok
+  string msg = 1;
+  // 错误码。成功时为0
+  int32 code = 2;
+  // 数据。http code为200时才有数据
+  google.protobuf.Any data = 3;
+}
+
+// 通用服务端响应
+message RawResponse
+{
+  // 错误信息。成功时为ok
+  string msg = 1;
+  // 错误码。成功时为0
+  int32 code = 2;
+  // 数据。http code为200时才有数据
+  bytes data = 3;
+}
+
+message EmptyResp
+{
+
+}

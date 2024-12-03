@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: conglinyewai2
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 569d6dc13f5982840a83de1e5c7bc055, type: 3}
+  - {fileID: 21300000, guid: 094d1f6792c5edf459e803f6707000b0, type: 3}
+  - {fileID: 21300000, guid: 7f0d8cf4a25a7a0479321049ea59c281, type: 3}
+  - {fileID: 21300000, guid: 2c389db3896292f41a88083a918b3181, type: 3}

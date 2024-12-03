@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: DongShang
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 159eb2e9dbfb94e49b710f692ff842c6, type: 3}
+  - {fileID: 21300000, guid: ddc4d96f023b3d344bc77e282fe8e433, type: 3}
+  - {fileID: 21300000, guid: fbbcedf7ccf32d3448f24fb2f48a5362, type: 3}
+  - {fileID: 21300000, guid: c71fc6956cefc41479d63ce843386683, type: 3}
+  - {fileID: 21300000, guid: 671000ea802cbd94abd2104c6844a880, type: 3}
+  - {fileID: 21300000, guid: 03aeef5628341334f8780062ae29f838, type: 3}
+  - {fileID: 21300000, guid: b317175cb3022da428db9db98c362e68, type: 3}
+  - {fileID: 21300000, guid: 0106a654e242e5540bff0cad1aed9638, type: 3}
+  - {fileID: 21300000, guid: f537b793dd54ff9419c6a60c467a30d7, type: 3}
+  - {fileID: 21300000, guid: aa6a39f6a407d374cac69b2faf6f39b0, type: 3}
+  - {fileID: 21300000, guid: 7b772da8b4d154d429829b98fb4b4146, type: 3}
+  - {fileID: 21300000, guid: 1b6b70767971f734ebfaa2b5409359d6, type: 3}
+  - {fileID: 21300000, guid: 6fe2c3d7e364ecd428afb1252f85eab5, type: 3}
+  - {fileID: 21300000, guid: 7f525f0380489b14e8982f9f05c90609, type: 3}
+  - {fileID: 21300000, guid: 7f24e6fe19131a448a3c93761d58a100, type: 3}
+  - {fileID: 21300000, guid: aeade66fdf2b10f40a10cf6571739986, type: 3}
+  - {fileID: 21300000, guid: df1bf0aba7079b6488dc5f6e5ea3f64b, type: 3}
+  - {fileID: 21300000, guid: f2251b6c99eb6fd4e9932147991b5b74, type: 3}
+  - {fileID: 21300000, guid: 931db9e1182061d44a500a5ec4fd8311, type: 3}
+  - {fileID: 21300000, guid: 29663ff5c1b13c641a402da97d21d6f1, type: 3}

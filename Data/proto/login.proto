@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package transfer;
+
+option go_package = "./transfer";
+
+//请求用户登录注册
+//ResponseType = UserLoginResp
+//MessageVerb = POST
+//GameUrlOpcode = api/auth/login
+message UserLoginReq // IRequest
+{
+  // 账号登录时为账号；手机号登录时为手机号；微信登录时为code；邮箱登录时为邮箱；99SDK登录时为openid
+  string account = 1;
+  // 账号登录时为密码；手机号登录时为验证码；微信登录时为code；邮箱登录时为验证码；99SDK登录时为token
+  string credential = 2;
+  // 登录平台，区分大小写。LOCAL=账号密码登录；WECHAT=微信登录；99SDK=99SDK登录；PHONE=手机号登录；EMAIL=邮箱登录
+  string platform = 3;
+  // 用户的硬件信息
+  DeviceInfo deviceInfo = 4;
+  // 来源用户的广告信息
+  AdsInfo adsInfo = 5;
+}
+
+// 响应用户登录
+message UserLoginResp // IResponse
+{
+  // 身份凭证，用于后续请求的身份认证。放在http header的Authorization字段中，格式为：Bearer token。（注意空格）
+  string token = 1;
+  // 身份凭证的过期时间，单位为毫秒
+  int64 expire = 2;
+  // 服务器的UTC时间戳, 单位毫秒
+  int64 serverTime = 3;
+}
+
+message DeviceInfo
+{
+  // 用户微信的openid
+  string distinctId = 1;
+  // 操作系统 ios/android
+  string os = 2;
+  // 操作系统版本 例如：Android OS 9
+  string osVersion = 3;
+  // 客户端的版本号
+  string appVersion = 4;
+  // 设备型号 例如：iphone15、redmi14
+  string deviceModel = 5;
+  // 设备类型 例如：iphone、ipad、pc
+  string deviceType = 6;
+}
+
+message AdsInfo
+{
+  // 用户归因到的广告商
+  string userSource = 1;
+  // 用户归因到的广告位
+  string adName = 2;
+}

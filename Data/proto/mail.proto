@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+message MailDto
+{
+  // 邮件id
+  int64 id = 1;
+  // 邮件标题
+  string title = 2;
+  // 邮件内容
+  string content = 3;
+  // 邮件状态 0=未读 1=已读未领取 2=已读已领取
+  int32 status = 5;
+  // 邮件创建时间 utc时间戳 单位毫秒
+  int64 createTime = 6;
+  // 附件
+  repeated ChangeItemDto attachments = 7;
+  // 邮件配置id
+  int32 cid = 8; // 邮件配置id
+}
+
+// 邮件列表请求
+//ResponseType = GetMailListResp
+//MessageVerb = POST
+//GameUrlOpcode = api/mail/list
+message GetMailListReq // IRequest
+{
+
+}
+
+// 邮件列表响应
+message GetMailListResp // IResponse
+{
+  // 邮件列表
+  repeated MailDto mails = 1;
+}
+
+// 邮件操作请求
+//ResponseType = MailOperateResp
+//MessageVerb = POST
+//GameUrlOpcode = api/mail/operate
+message MailOperateReq // IRequest
+{
+  // 邮件id
+  repeated int64 id = 1;
+  // 操作类型 1=已读操作 2=领取附件
+  int32 operateType = 2;
+}
+
+message MailOperateResp // IResponse
+{
+  // 邮件附件内容 已读操作则返回空列表
+  repeated RoleItemChangeDto attachments = 1;
+}
+
+//// 邮件批量操作请求
+////ResponseType = MailBatchOperateResp
+////MessageVerb = POST
+////GameUrlOpcode = api/mail/batch/operate
+//message MailBatchOperateReq // IRequest
+//{
+//  // 邮件id列表
+//  repeated int64 ids = 1;
+//  // 操作类型 1=已读操作 2=领取附件
+//  int32 operateType = 2;
+//}
+//
+//message MailBatchOperateResp // IResponse
+//{
+//  // 邮件附件内容 已读操作则返回空列表
+//  repeated RoleItemChangeDto attachments = 1;
+//}

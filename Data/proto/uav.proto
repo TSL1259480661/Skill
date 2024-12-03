@@ -1,0 +1,129 @@
+syntax = "proto3";
+
+import "item.proto";
+package transfer;
+
+option go_package = "./transfer";
+
+
+//请求UAV列表
+//ResponseType = GetUavResp
+//MessageVerb = POST
+//GameUrlOpcode = api/uav/list
+message GetUavReq  // IRequest
+{
+}
+
+// 响应UAV列表
+message GetUavResp // IResponse
+{
+  // UAV列表
+  repeated UavDto list = 1;
+  repeated UavSkillSlotDto skills = 2;
+  repeated UavFormationDto formations = 3;
+}
+
+message UavDto
+{
+  // 配置id
+  int32 cid = 1;
+}
+
+message UavSkillSlotDto
+{
+  // 预设套装id
+  int32 presetId = 1;
+  // 槽位id
+  int32 slotId = 2;
+  // 孔位id
+  int32 posId = 3;
+  // 技能配置id
+  int32 skillCid = 4;
+}
+
+message UavFormationDto
+{
+  // 槽位id 1-5
+  int32 slotId = 1;
+  // UAV配置id 对应配置表uav_id
+  int32 uavType = 2;
+}
+
+//请求激活UAV
+//ResponseType = ActivateUavResp
+//MessageVerb = POST
+//GameUrlOpcode = api/uav/activate
+message ActivateUavReq // IRequest
+{
+  // UAV配置id
+  int32 cid = 1;
+}
+
+// 响应激活UAV
+message ActivateUavResp // IResponse
+{
+  // 消耗
+  repeated RoleItemChangeDto costs = 1;
+  UavDto uav = 2;
+}
+
+//请求升级UAV
+//ResponseType = UpgradeUavResp
+//MessageVerb = POST
+//GameUrlOpcode = api/uav/upgrade
+message UpgradeUavReq // IRequest
+{
+  // UAV配置id
+  int32 cid = 1;
+  // 消耗物品配置id
+  int32 costItemCid = 2;
+}
+
+// 响应升级UAV
+message UpgradeUavResp // IResponse
+{
+  // 升级消耗
+  repeated RoleItemChangeDto costs = 1;
+}
+
+// 请求更改UAV技能槽
+// ResponseType = ChangeSkillResp
+// MessageVerb = POST
+// GameUrlOpcode = api/uav/skill/change
+message ChangeSkillReq // IRequest
+{
+  // 预设套装id 1-3
+  int32 presetId = 1;
+  // 槽位id 1-3
+  int32 slotId = 2;
+  // 孔位id 1-N
+  int32 posId = 3;
+  // 技能配置id
+  int32 skillCid = 4;
+  // 是否嵌入
+  bool embed = 5;
+}
+
+// 响应更改UAV技能槽
+message ChangeSkillResp // IResponse
+{
+}
+
+// 请求更改UAV编队
+// ResponseType = ChangeFormationResp
+// MessageVerb = POST
+// GameUrlOpcode = api/uav/formation/change
+message ChangeFormationReq // IRequest
+{
+  // 槽位id 1-5
+  int32 slotId = 1;
+  // UAV配置id
+  int32 uavCid = 2;
+  // 是否嵌入
+  bool embed = 3;
+}
+
+// 响应更改UAV编队
+message ChangeFormationResp // IResponse
+{
+}

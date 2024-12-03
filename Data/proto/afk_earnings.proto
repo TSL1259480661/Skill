@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// 获取打工收益页面内容
+//ResponseType = EarningsInfoResp
+//MessageVerb = POST
+//GameUrlOpcode = api/afk_earnings/info
+message EarningsInfoReq // IRequest
+{
+
+}
+
+// 打工收益页面内容响应
+message EarningsInfoResp // IResponse
+{
+  // 可领取的奖励内容
+  repeated ChangeItemDto earnings = 1;
+  // 玩家上一次领取的时间戳，单位：毫秒
+  int64 lastReceivedTime = 2;
+}
+
+// 获取打工收益奖励请求
+//ResponseType = EarningsReceiveResp
+//MessageVerb = POST
+//GameUrlOpcode = api/afk_earnings/receive
+message EarningsReceiveReq // IRequest
+{
+
+}
+
+// 获取打工收益奖励响应
+message EarningsReceiveResp // IResponse
+{
+  // 玩家道具的变动
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+// 获取快速收取奖励道具信息请求
+//ResponseType = QuickEarningsItemResp
+//MessageVerb = POST
+//GameUrlOpcode = api/afk_earnings/quick/item
+message QuickEarningsItemReq // IRequest
+{
+
+}
+
+// 获取快速收取奖励道具信息响应
+message QuickEarningsItemResp // IResponse
+{
+  // 玩家快速收取奖励道具信息
+  repeated RoleItemDto quickEarningsItems = 1;
+}
+
+// 使用快速收取奖励道具请求
+//ResponseType = QuickEarningsItemUseResp
+//MessageVerb = POST
+//GameUrlOpcode = api/afk_earnings/quick/use
+message QuickEarningsItemUseReq // IRequest
+{
+  // 需要使用的道具id
+  int32 cid = 1;
+}
+
+// 使用快速收取奖励道具响应
+message QuickEarningsItemUseResp // IResponse
+{
+  // 玩家道具的变动
+  repeated RoleItemChangeDto changes = 1;
+}

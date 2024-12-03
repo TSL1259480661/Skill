@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: ClickScreen
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 255436211d0dfaf458f194ea31c04150, type: 3}
+  - {fileID: 21300000, guid: d8440a71c1193c34ab10da3aab8237ac, type: 3}
+  - {fileID: 21300000, guid: bcdebf79188f69b48987f23dde6465f1, type: 3}
+  - {fileID: 21300000, guid: e9544cbc0cddacb4c9604307b0b9365b, type: 3}
+  - {fileID: 21300000, guid: 8255a369e10455242a9e8646bafd3091, type: 3}
+  - {fileID: 21300000, guid: a7a63c0e75adcf84c987c18736a2b930, type: 3}
+  - {fileID: 21300000, guid: 02333107ecc858d4e93ed1f6f56a90ad, type: 3}
+  - {fileID: 21300000, guid: 0cbfc990a6cec9c4f816e7d3a97990c6, type: 3}
+  - {fileID: 21300000, guid: d70a98f68fd1bdb4e8cb4c6d2d07d06d, type: 3}
+  - {fileID: 21300000, guid: 1670c339612961b418d679b619eddf04, type: 3}
+  - {fileID: 21300000, guid: 13a0e409ed183634495e7708d30cc399, type: 3}

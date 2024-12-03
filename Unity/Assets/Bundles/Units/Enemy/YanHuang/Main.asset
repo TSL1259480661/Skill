@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbc7bf5648efaf4aa326f84ae645232, type: 3}
+  m_Name: Main
+  m_EditorClassIdentifier: 
+  IdleLeft: {fileID: 11400000, guid: ddf9a29330497364496a3384bee71422, type: 2}
+  IdleRight: {fileID: 11400000, guid: ddf9a29330497364496a3384bee71422, type: 2}
+  MoveLeft: {fileID: 0}
+  MoveRight: {fileID: 0}
+  Hurt: {fileID: 11400000, guid: 397a88d0ad9d20c46b2f3bc7fa31883e, type: 2}
+  Death: {fileID: 11400000, guid: 92a3a41985396e549b68ddb0f8fe3334, type: 2}
+  Reload: {fileID: 0}
+  WindUp: {fileID: 11400000, guid: 081c81963fb5e6d429e33faf0cdd8b96, type: 2}
+  WindUp2: {fileID: 11400000, guid: f165bb64e625bab4aa943fceacb8ec26, type: 2}
+  WindDown: {fileID: 11400000, guid: 6ba1b682263499f45aa3569817237ccf, type: 2}
+  WindDown2: {fileID: 11400000, guid: c521bcb34f2a9744e8bc9b30a82e0408, type: 2}
+  Imbalance: {fileID: 11400000, guid: 244934863a7cec448b4df0f4738597a9, type: 2}
+  Skill11: {fileID: 11400000, guid: 50cce73594950b2458bb0e59dc149098, type: 2}
+  Skill12: {fileID: 11400000, guid: f1a9d4e082ebf8c4fab480a54cb10211, type: 2}
+  Skill13: {fileID: 11400000, guid: c158a5648dce50a4b9fc4405ef06f3ea, type: 2}
+  Skill14: {fileID: 11400000, guid: 37d8c8a8555eb2a49a21387ac1f31b77, type: 2}
+  Skill15: {fileID: 0}
+  Skill21: {fileID: 0}
+  Skill22: {fileID: 0}
+  Skill23: {fileID: 0}
+  Skill24: {fileID: 0}
+  Skill25: {fileID: 0}

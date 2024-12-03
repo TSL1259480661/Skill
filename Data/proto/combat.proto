@@ -1,0 +1,198 @@
+syntax = "proto3";
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+//请求关卡列表信息
+//ResponseType = GetLevelInfoResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/info
+message GetLevelInfoReq // IRequest
+{
+
+}
+
+//响应关卡列表信息
+message GetLevelInfoResp // IResponse
+{
+  // 关卡信息
+  repeated LevelInfoDto levels = 1;
+}
+
+//请求关卡列表信息
+//ResponseType = GetLevelInfoPageResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/info/page
+message GetLevelInfoPageReq // IRequest
+{
+  repeated int32 pageNums = 1;
+}
+
+//响应关卡列表信息
+message GetLevelInfoPageResp // IResponse
+{
+  // 关卡分页信息
+  repeated PageLevelInfoDto pages = 1;
+}
+
+message PageLevelInfoDto
+{
+  // 约定每页20条信息
+  repeated LevelInfoDto infos = 1;
+  int32 pageNum = 2;
+}
+
+// 关卡信息
+message LevelInfoDto
+{
+  // 关卡配置id
+  int32 cid = 1;
+  // 关卡领奖状态
+  repeated bool rewards = 2;
+  // 关卡战斗结果 -1=投降 0=失败 1~3=星级
+  int32 score = 3;
+  // 关卡最佳时长（秒）
+  int32 bestTime = 4;
+  // 关卡最佳防守（百分比0~100)
+  int32 bestDefence = 5;
+}
+
+//请求上传战斗数据
+//ResponseType = UploadCombatResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/upload
+message UploadCombatReq // IRequest
+{
+  // 关卡配置id
+  int32 cid = 1;
+  // 战斗数据。目前由客户端自定义格式，以string类型传输
+  string combatInfo = 2;
+}
+
+//响应上传战斗数据
+message UploadCombatResp // IResponse
+{
+
+}
+
+//请求下载战斗数据
+//ResponseType = ResumeCombatResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/resume
+message ResumeCombatReq // IRequest
+{
+
+}
+
+//响应下载战斗数据
+message ResumeCombatResp // IResponse
+{
+  // 是否存在未完成的战斗
+  bool inCombat = 1;
+  // 关卡配置id
+  int32 cid = 2;
+  // 战斗数据。目前由客户端自定义格式，以string类型传输
+  string combatInfo = 3;
+}
+
+//请求开始战斗
+//ResponseType = StartCombatResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/start
+message StartCombatReq // IRequest
+{
+  // 关卡配置id
+  int32 cid = 1;
+}
+
+//响应开始战斗
+message StartCombatResp // IResponse
+{
+  // 进入战斗消耗
+  repeated RoleItemChangeDto costs = 1;
+  // 本场战斗的唯一标识符
+  string combatUid = 2;
+}
+
+//请求结束战斗并结算
+//ResponseType = FinishCombatResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/finish
+message FinishCombatReq // IRequest
+{
+  // 关卡配置id
+  int32 cid = 1;
+  // 战斗结果  -1=投降 0=失败 1~3=星级
+  int32 score = 2;
+  // 战斗时长（秒）
+  int32 time = 3;
+  // 防守百分比（0~100）
+  int32 defense = 4;
+  // 完成的波次
+  int32 wave = 5;
+  // 达到的等级
+  int32 lv = 6;
+  // 技能选择
+  repeated int32 skillChoices = 7;
+  // 击杀敌人数量
+  repeated EnemyDto killedEnemies = 8;
+  // 元素精灵技能主动施放次数
+  int32 spiritSkillCount = 9;
+}
+
+//响应结束战斗并结算
+message FinishCombatResp // IResponse
+{
+  // 结算奖励
+  repeated RoleItemChangeDto rewards = 1;
+  // 战斗结果  -1=投降 0=失败 1~3=星级
+  int32 score = 2;
+  // 该关卡已失败通关次数
+  int32 failedCount = 3;
+}
+
+//请求扫荡
+//ResponseType = SweepLevelResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/sweep
+message SweepLevelReq // IRequest
+{
+  // 关卡配置id
+  int32 cid = 1;
+}
+
+//响应扫荡
+message SweepLevelResp // IResponse
+{
+  // 扫荡奖励
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+//请求领取关卡奖励
+//ResponseType = RetrieveRewardsResp
+//MessageVerb = POST
+//GameUrlOpcode = api/combat/retrieve
+message RetrieveRewardsReq // IRequest
+{
+  // 关卡配置id
+  int32 cid = 1;
+  // 星级[1-3]
+  int32 score = 2;
+}
+
+//响应领取关卡奖励
+message RetrieveRewardsResp // IResponse
+{
+  // 奖励 返回至请求星级的所有奖励
+  repeated RoleItemChangeDto rewards = 1;
+}
+
+message EnemyDto
+{
+  // 怪物配置id
+  int32 cid = 1;
+  // 击杀的敌人数量
+  int64 num = 2;
+}

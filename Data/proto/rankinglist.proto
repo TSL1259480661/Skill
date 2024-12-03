@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package transfer;
+
+option go_package = "./transfer";
+
+//排行榜玩家数据
+message RankRoleDto
+{
+  int64 id = 1;
+  // 昵称
+  string nickname = 2;
+  // 头像
+  string avatar = 3;
+  // 玩家等级
+  int32 level = 4;
+  // 玩家排名
+  int32 rank = 5;
+}
+
+// 获取排行榜列表
+//ResponseType = GetRankingListResp
+//MessageVerb = POST
+//GameUrlOpcode = api/ranking/list
+message GetRankingListReq // IRequest
+{
+  //排行榜类型
+  int32 type = 1;
+  //排行榜涵盖的范围（EX: 1.全区服 2.单服 3.好友）
+  int32 zoneType = 2;
+  //排行榜起始位置
+  int64 start = 3;
+  //排行榜结束位置
+  int64 end = 4;
+}
+
+// 排行榜列表响应
+message GetRankingListResp // IResponse
+{
+  // 排行榜列表列表
+  repeated RankRoleDto rankRole = 1;
+}
+

@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package transfer;
+
+option go_package = "./transfer";
+
+
+//请求功能解锁列表
+//ResponseType = GetFuncOpenResp
+//MessageVerb = POST
+//GameUrlOpcode = api/func_open/list
+message GetFuncOpenReq  // IRequest
+{
+}
+
+// 响应功能解锁列表
+message GetFuncOpenResp // IResponse
+{
+  // 技能列表
+  repeated FuncOpenDto funcs = 1;
+}
+
+// 功能解锁数据
+message FuncOpenDto
+{
+  // 功能解锁配置id
+  int32 cid = 1;
+  // 解锁时间戳(毫秒)
+  int64 time = 2;
+}
+
+
+//debug功能解锁
+//ResponseType = OpenFuncResp
+//MessageVerb = POST
+//GameUrlOpcode = api/func_open/open
+message OpenFuncReq  // IRequest
+{
+  // 功能解锁配置id
+  repeated int32 cids = 1;
+}
+
+// 响应功能解锁列表
+message OpenFuncResp // IResponse
+{
+  // 解锁成功的配置id
+  repeated int32 cids = 1;
+}
+
+//debug功能关闭
+//ResponseType = CloseFuncResp
+//MessageVerb = POST
+//GameUrlOpcode = api/func_open/close
+message CloseFuncReq  // IRequest
+{
+  // 功能解锁配置id
+  int32 cid = 1;
+}
+
+// 响应功能解锁列表
+message CloseFuncResp // IResponse
+{
+}

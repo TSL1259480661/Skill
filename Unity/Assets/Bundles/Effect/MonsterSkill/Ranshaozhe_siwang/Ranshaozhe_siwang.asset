@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Ranshaozhe_siwang
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 45c4b75db71831b4ca6953159d1c7010, type: 3}
+  - {fileID: 21300000, guid: 2e6a669042e423947a17d060d02dcf50, type: 3}
+  - {fileID: 21300000, guid: c41bd6b5575a8844295a482931a0566d, type: 3}
+  - {fileID: 21300000, guid: c8c0a01fd7fe26b4a990ff9f07864a50, type: 3}
+  - {fileID: 21300000, guid: a49221b5d1f252b42bcc37601b1200fb, type: 3}
+  - {fileID: 21300000, guid: ba6a4e1a8e1fc394cbf49e56c983b380, type: 3}
+  - {fileID: 21300000, guid: 6fbe5996b21f1d14395913586ba3fd9a, type: 3}
+  - {fileID: 21300000, guid: 4f038718ee5a65940a3fbcf092d35860, type: 3}
+  - {fileID: 21300000, guid: e48644d75c72cb64ea339b89c5e90312, type: 3}
+  - {fileID: 21300000, guid: 6a0b1950fac58804780ea6525be30e72, type: 3}
+  - {fileID: 21300000, guid: c569e03306c1c9e4eacb33811e7a424b, type: 3}
+  - {fileID: 21300000, guid: 45fa2314a19d0914d820f69ba05112c3, type: 3}
+  - {fileID: 21300000, guid: c0b493791f9ec6d49b901e6cd66bfc47, type: 3}
+  - {fileID: 21300000, guid: 2edb88a04de993648932d7f3d8a5e5d0, type: 3}
+  - {fileID: 21300000, guid: e260f4c10597a0441a42738ac44e69d5, type: 3}
+  - {fileID: 21300000, guid: 0e876d5675765544ea6808b37ed2b214, type: 3}
+  - {fileID: 21300000, guid: d64744ff8c7b1494e806392ebbef4857, type: 3}
+  - {fileID: 21300000, guid: 254ad4a3db05ea8408b83c2362dcaea3, type: 3}
+  - {fileID: 21300000, guid: b33947b26bbe8e7439efcb70998df152, type: 3}
+  - {fileID: 21300000, guid: 9893bb9ec205c6c4e9d9fabc50ddd855, type: 3}

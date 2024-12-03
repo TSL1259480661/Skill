@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Block
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 73c649110a9c3f54bab80be2af20a96a, type: 3}
+    - {fileID: 2800000, guid: 3928197822d8392499c7d553b23cd5c3, type: 3}
+    - {fileID: 2800000, guid: 3490d780af9a7e94b8c4e8a479f54bd4, type: 3}
+    - {fileID: 2800000, guid: afd6f839c8b23144cb5fa5ac97053f29, type: 3}
+    - {fileID: 2800000, guid: 5886c0fa0b8b3f7489ac73a53fa86c0b, type: 3}
+    - {fileID: 2800000, guid: 0353bbc7d92c7dd498250c78926720f1, type: 3}
+    - {fileID: 2800000, guid: 7aeb8f13eb52df445a8acf194d42e78f, type: 3}
+    - {fileID: 2800000, guid: 7dc104179832b504fb2127332fbf31d5, type: 3}
+    - {fileID: 2800000, guid: b68495eadab793049b3300bf0041591c, type: 3}
+    - {fileID: 2800000, guid: 1c4c8123fca0126419b84b831bb54335, type: 3}
+    - {fileID: 2800000, guid: 51650fd24f77c114a80b9e60d6bdd5ce, type: 3}
+    - {fileID: 2800000, guid: 3d5f542b6273d2a4c86e69894cb92992, type: 3}
+    - {fileID: 2800000, guid: 38c394617aca55042b069eeca8231111, type: 3}
+    - {fileID: 2800000, guid: 5803bee67d0fe224e80f0e95107f0973, type: 3}
+    - {fileID: 2800000, guid: bf18a97903daf4f498838026150cf9dd, type: 3}
+    - {fileID: 2800000, guid: 24678ef0eac91de4fb005c3917de6c7c, type: 3}
+    - {fileID: 2800000, guid: efea9d8fc0a56f14bac4fe7265f4fcd7, type: 3}
+    - {fileID: 2800000, guid: c3786ae3bee73774886f56d0cf33c9c0, type: 3}
+    - {fileID: 2800000, guid: 32a52abf97becaa43a9d9c387cab325a, type: 3}
+    - {fileID: 2800000, guid: be128944b8c503d42951fa0158e5160c, type: 3}
+    - {fileID: 2800000, guid: 9a57a029d75dcac40a5c91e9baa7edc3, type: 3}
+    - {fileID: 2800000, guid: 057291c9f46a12b4eaf14f8d840a9961, type: 3}
+    - {fileID: 2800000, guid: eaa4912ad6f9527429c1813e1a866ade, type: 3}
+    - {fileID: 2800000, guid: 45425aa915a887349846f93d2dd0b938, type: 3}
+    - {fileID: 2800000, guid: ab67efceb6b2d8b4a9a39aa0f57d8a0b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 3490d780af9a7e94b8c4e8a479f54bd4: 21300000
+    - 24678ef0eac91de4fb005c3917de6c7c: 21300000
+    - 73c649110a9c3f54bab80be2af20a96a: 21300000
+    - 38c394617aca55042b069eeca8231111: 21300000
+    - 51650fd24f77c114a80b9e60d6bdd5ce: 21300000
+    - 7aeb8f13eb52df445a8acf194d42e78f: 21300000
+    - 1c4c8123fca0126419b84b831bb54335: 21300000
+    - c3786ae3bee73774886f56d0cf33c9c0: 21300000
+    - be128944b8c503d42951fa0158e5160c: 21300000
+    - 5803bee67d0fe224e80f0e95107f0973: 21300000
+    - 7dc104179832b504fb2127332fbf31d5: 21300000
+    - 0353bbc7d92c7dd498250c78926720f1: 21300000
+    - 3928197822d8392499c7d553b23cd5c3: 21300000
+    - 9a57a029d75dcac40a5c91e9baa7edc3: 21300000
+    - afd6f839c8b23144cb5fa5ac97053f29: 21300000
+    - bf18a97903daf4f498838026150cf9dd: 21300000
+    - 45425aa915a887349846f93d2dd0b938: 21300000
+    - 057291c9f46a12b4eaf14f8d840a9961: 21300000
+    - eaa4912ad6f9527429c1813e1a866ade: 21300000
+    - b68495eadab793049b3300bf0041591c: 21300000
+    - 5886c0fa0b8b3f7489ac73a53fa86c0b: 21300000
+    - 3d5f542b6273d2a4c86e69894cb92992: 21300000
+    - ab67efceb6b2d8b4a9a39aa0f57d8a0b: 21300000
+    - efea9d8fc0a56f14bac4fe7265f4fcd7: 21300000
+    - 32a52abf97becaa43a9d9c387cab325a: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3490d780af9a7e94b8c4e8a479f54bd4, type: 3}
+  - {fileID: 21300000, guid: 24678ef0eac91de4fb005c3917de6c7c, type: 3}
+  - {fileID: 21300000, guid: 73c649110a9c3f54bab80be2af20a96a, type: 3}
+  - {fileID: 21300000, guid: 38c394617aca55042b069eeca8231111, type: 3}
+  - {fileID: 21300000, guid: 51650fd24f77c114a80b9e60d6bdd5ce, type: 3}
+  - {fileID: 21300000, guid: 7aeb8f13eb52df445a8acf194d42e78f, type: 3}
+  - {fileID: 21300000, guid: 1c4c8123fca0126419b84b831bb54335, type: 3}
+  - {fileID: 21300000, guid: c3786ae3bee73774886f56d0cf33c9c0, type: 3}
+  - {fileID: 21300000, guid: be128944b8c503d42951fa0158e5160c, type: 3}
+  - {fileID: 21300000, guid: 5803bee67d0fe224e80f0e95107f0973, type: 3}
+  - {fileID: 21300000, guid: 7dc104179832b504fb2127332fbf31d5, type: 3}
+  - {fileID: 21300000, guid: 0353bbc7d92c7dd498250c78926720f1, type: 3}
+  - {fileID: 21300000, guid: 3928197822d8392499c7d553b23cd5c3, type: 3}
+  - {fileID: 21300000, guid: 9a57a029d75dcac40a5c91e9baa7edc3, type: 3}
+  - {fileID: 21300000, guid: afd6f839c8b23144cb5fa5ac97053f29, type: 3}
+  - {fileID: 21300000, guid: bf18a97903daf4f498838026150cf9dd, type: 3}
+  - {fileID: 21300000, guid: 45425aa915a887349846f93d2dd0b938, type: 3}
+  - {fileID: 21300000, guid: 057291c9f46a12b4eaf14f8d840a9961, type: 3}
+  - {fileID: 21300000, guid: eaa4912ad6f9527429c1813e1a866ade, type: 3}
+  - {fileID: 21300000, guid: b68495eadab793049b3300bf0041591c, type: 3}
+  - {fileID: 21300000, guid: 5886c0fa0b8b3f7489ac73a53fa86c0b, type: 3}
+  - {fileID: 21300000, guid: 3d5f542b6273d2a4c86e69894cb92992, type: 3}
+  - {fileID: 21300000, guid: ab67efceb6b2d8b4a9a39aa0f57d8a0b, type: 3}
+  - {fileID: 21300000, guid: efea9d8fc0a56f14bac4fe7265f4fcd7, type: 3}
+  - {fileID: 21300000, guid: 32a52abf97becaa43a9d9c387cab325a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Block0002
+  - Block0015
+  - Block0000
+  - Block0012
+  - Block0010
+  - Block0006
+  - Block0009
+  - Block0017
+  - Block0019
+  - Block0013
+  - Block0007
+  - Block0005
+  - Block0001
+  - Block0020
+  - Block0003
+  - Block0014
+  - Block0023
+  - Block0021
+  - Block0022
+  - Block0008
+  - Block0004
+  - Block0011
+  - Block0024
+  - Block0016
+  - Block0018
+  m_RenderDataMap: {}
+  m_Tag: Block
+  m_IsVariant: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Lieshazhe_Xuli
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: f034d41a8b098224fa8f1f5c243fc206, type: 3}
+  - {fileID: 21300000, guid: c95ecc612ba35934091895dedb531fa1, type: 3}
+  - {fileID: 21300000, guid: e58f4bcf2dcc839408d860b9ca4c997b, type: 3}
+  - {fileID: 21300000, guid: 58045f666e5b87c4a9dc6d9bd45455f1, type: 3}
+  - {fileID: 21300000, guid: ddb36fce6950afa4abb8699fbe319cc1, type: 3}
+  - {fileID: 21300000, guid: 8213b890a3c369b4bb9d4a95e9d3afd7, type: 3}
+  - {fileID: 21300000, guid: 5cb573b0d42fd274ab5039284dfeb980, type: 3}
+  - {fileID: 21300000, guid: 6feb8fe8168e6924aa2db94df31506a9, type: 3}
+  - {fileID: 21300000, guid: 07ca8d97f7eb3054e9c6c4fb3bc91eb0, type: 3}
+  - {fileID: 21300000, guid: fc4c1e030b21a834caaafc036c8f5bd1, type: 3}
+  - {fileID: 21300000, guid: 1695e848294e9e64182fd1de82f6244f, type: 3}
+  - {fileID: 21300000, guid: 6de77e6acfa2f944496e9f3f98957184, type: 3}
+  - {fileID: 21300000, guid: eb96837061987b942bf28dd5e15753df, type: 3}
+  - {fileID: 21300000, guid: 7e87bf08a8f73404f8f9e9430331ff2a, type: 3}
+  - {fileID: 21300000, guid: 8195320e20adfdd40b61b987b37aac3c, type: 3}

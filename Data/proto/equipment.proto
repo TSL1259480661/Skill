@@ -1,0 +1,159 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+// 装备信息
+message EquipmentDto
+{
+  // 角色UID
+  int64 roleId = 1;
+  // 装备配置id；携带装备品质、装备品阶、强化等级上限、装备部位
+  int32 cid = 2;
+  // 装备的唯一id
+  int64 id = 4;
+  // 装备的强化配置id；同时能携带强化功能提供的战斗力值、强化功能的等级、属性类型与值
+  int32 enhanceCid = 5;
+  // 精工的配置id；同时携带精工等级、主词条与值、战斗力值
+  int32 forgeCid = 6;
+  // 其它词条
+  repeated EquipForgeAttr attrs = 7;
+  // 是否穿戴在身上
+  bool hasWore = 8;
+  // 是否已锁定
+  bool hasLocked = 9;
+}
+
+
+// 装备精工词条结构
+message EquipForgeAttr
+{
+  // 词条配置id； 同时携带属性id、设置颜色
+  int32 cId = 1;
+  // 属性值
+  float attrValue = 2;
+//  // 排序值？ todo 或不需要（关键如何排序）
+//  int32 sort = 4;
+  // 词条类别
+  EquipForgeAttrType eType = 4;
+}
+
+enum EquipForgeAttrType
+{
+  EATTR_NONE = 0;
+  EATTR_DEPUTY = 1; // 副词条
+  EATTR_RARE = 2; // 稀有词条
+  EATTR_MAIN = 3; // 主词条
+}
+
+// 装备升级时的请求结构体
+message EquipUpToLevel
+{
+  // 装备唯一id
+  int64 id = 1;
+  // 提升的目标等级
+  int32 upToLevel = 2;
+}
+
+//装备强化升级请求
+//ResponseType = EnhanceUpgradeToLevelResp
+//MessageVerb = POST
+//GameUrlOpcode = api/equip/enhance/upgrade
+message EnhanceUpgradeToLevelReq  // IRequest
+{
+  // 需要强化升级的装备信息
+  repeated EquipUpToLevel upToLevelInfo = 1;
+}
+
+message EnhanceUpgradeToLevelResp  // IResponse
+{
+  repeated EquipmentDto afterEquips = 1;
+  repeated RoleItemChangeDto usedItems = 2;
+}
+
+//装备精工升级请求
+//ResponseType = ForgeUpgradeToLevelResp
+//MessageVerb = POST
+//GameUrlOpcode = api/equip/forge/upgrade
+message ForgeUpgradeToLevelReq  // IRequest
+{
+  // 需要精工升级的装备信息
+  EquipUpToLevel upToLevelInfo = 1;
+}
+
+message ForgeUpgradeToLevelResp  // IResponse
+{
+  EquipmentDto afterEquip = 1;
+  repeated RoleItemChangeDto usedItems = 2;
+}
+
+//装备分解请求
+//ResponseType = DecomposeResp
+//MessageVerb = POST
+//GameUrlOpcode = api/equip/decompose
+message DecomposeReq // IRequest
+{
+  // 需要分解的装备唯一id列表
+  repeated int64 ids = 1;
+}
+
+message DecomposeResp // IResponse
+{
+  // 分解后物品信息
+  repeated RoleItemChangeDto addItems = 1;
+}
+
+//装备穿戴请求
+//ResponseType = EquipWearResp
+//MessageVerb = POST
+//GameUrlOpcode = api/equip/wear
+message EquipWearReq // IRequest
+{
+  // 装备唯一id
+  int64 id = 1;
+}
+
+message EquipWearResp // IResponse
+{
+  bool success = 1;
+}
+
+
+//装备上锁操作请求
+//ResponseType = LockResp
+//MessageVerb = POST
+//GameUrlOpcode = api/equip/lock/operate
+message EquipLockReq // IRequest
+{
+  // 装备唯一id
+  int64 id = 1;
+  // 操作类型 1:上锁；2：解锁
+  int32 operateType = 2;
+}
+
+message EquipLockResp // IResponse
+{
+  bool success = 1;
+}
+
+
+
+//获取所有装备请求
+//ResponseType = GetAllEquipResp
+//MessageVerb = POST
+//GameUrlOpcode = api/equip/list
+message GetAllEquipReq // IRequest
+{
+
+}
+
+// 批量装备的返回
+message GetAllEquipResp // IResponse
+{
+  // 装备信息
+  repeated EquipmentDto equips = 1;
+}
+

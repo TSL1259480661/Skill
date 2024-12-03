@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: DianjuZhanshi_Gongji
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 9ac14c6e64c273842ba102745fd4bd80, type: 3}
+  - {fileID: 21300000, guid: c92b153427caf304ba0f35118cb44493, type: 3}
+  - {fileID: 21300000, guid: cd37f2efbcfe81b40aa2a832a9f505b9, type: 3}
+  - {fileID: 21300000, guid: 6675ba85837a56c41b3efb86857291c9, type: 3}
+  - {fileID: 21300000, guid: 1cc46206d625e4844b4ab391f9523c48, type: 3}

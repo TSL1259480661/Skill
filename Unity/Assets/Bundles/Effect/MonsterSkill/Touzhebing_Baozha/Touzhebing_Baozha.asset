@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Touzhebing_Baozha
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 1aaee403d14ee8a40a16ef242a244894, type: 3}
+  - {fileID: 21300000, guid: 462f93f08560fe54fb7c7207eccfb40e, type: 3}
+  - {fileID: 21300000, guid: bd3299dbf3807794ea0f9f5e782e33a2, type: 3}
+  - {fileID: 21300000, guid: 8473fbc629e7ad5498cce32e3f7c5932, type: 3}
+  - {fileID: 21300000, guid: 24e5c52e4d752534d86a5c0d842029bf, type: 3}
+  - {fileID: 21300000, guid: a8ba20cf3a8e8a543a05912acd2b8b8b, type: 3}
+  - {fileID: 21300000, guid: fbd1fdc81d4e49a4da9724ca1e5ed6db, type: 3}
+  - {fileID: 21300000, guid: 976e3c711fff11e49b14530807ac9f55, type: 3}
+  - {fileID: 21300000, guid: 251cced1905bcaf46ab07c6efa9d7cb7, type: 3}
+  - {fileID: 21300000, guid: af2878d1042e51a4789dcc2a1d7c1b0f, type: 3}
+  - {fileID: 21300000, guid: 0b1bab7d168fe174fb341f409d59a4a2, type: 3}
+  - {fileID: 21300000, guid: f4082aa5e77329645899b9b790644b88, type: 3}
+  - {fileID: 21300000, guid: 504180b354467f44493ad9d8ee97eb0a, type: 3}
+  - {fileID: 21300000, guid: 27671a1771a63c845b92a5c51a4d54f6, type: 3}
+  - {fileID: 21300000, guid: 3d44f6316c0107b489b127b7e20ca854, type: 3}
+  - {fileID: 21300000, guid: 2350a377f7dc6744dacbb2bde093ecc9, type: 3}
+  - {fileID: 21300000, guid: 74c15620f9c706640848f544d0f01e1e, type: 3}
+  - {fileID: 21300000, guid: 0b96298e56255ca40b09d7cf0aa20133, type: 3}
+  - {fileID: 21300000, guid: df157b647267e9d41b84ce7e56728ba2, type: 3}
+  - {fileID: 21300000, guid: 34a4468773eb41544b8c9cdfb45dff61, type: 3}
+  - {fileID: 21300000, guid: 19e8ade3e3d29a440964331354d47be4, type: 3}
+  - {fileID: 21300000, guid: d88ad6ede21ae0f4eb68c8793a78a2e3, type: 3}
+  - {fileID: 21300000, guid: 13757796b73802043bd18c8b2d085d33, type: 3}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: Fire_QiangKou
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 79632f7facd0493499d727b9c4078196, type: 3}
+  - {fileID: 21300000, guid: 140fe1e8c0ad15b4b90ced50622cb0d4, type: 3}
+  - {fileID: 21300000, guid: b5386e3809371a749b40c4d7a91b80af, type: 3}
+  - {fileID: 21300000, guid: 24782ee4688ae5f4dada08f4f2177e59, type: 3}
+  - {fileID: 21300000, guid: 5aaa897d147d26d4aa95242891ec6b6c, type: 3}
+  - {fileID: 21300000, guid: e1ef96f64392fd54f85cd2a2b881b96e, type: 3}
+  - {fileID: 21300000, guid: d2962d2e91e4228488e74f7a750ad4ac, type: 3}
+  - {fileID: 21300000, guid: e068402830d62e94f8c1c9a5b24c3528, type: 3}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: WindDown
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: 6e9464c263667f54ca9ec384f6753c36, type: 3}
+  - {fileID: 21300000, guid: 72b220d4c5e699149a468f1be12ffdea, type: 3}
+  - {fileID: 21300000, guid: c537779bf773c1f438ab7179dee17511, type: 3}
+  - {fileID: 21300000, guid: 7f4c4ac0e6840d84680680bd82faf171, type: 3}
+  - {fileID: 21300000, guid: 3257ab7f46e1fc347a339b498ca9d055, type: 3}
+  - {fileID: 21300000, guid: 91bdc9fb0b18e0a41a0aeade37b8b5d2, type: 3}
+  - {fileID: 21300000, guid: f49e9b9ad9f4def4da264e21bf67380b, type: 3}
+  - {fileID: 21300000, guid: e342b98f1d20367429058863a4a0d331, type: 3}
+  - {fileID: 21300000, guid: 8e9e913f9f759144f9132119a09e890c, type: 3}
+  - {fileID: 21300000, guid: 5e1d2dadfc2b9b048a139a312e057f3c, type: 3}
+  - {fileID: 21300000, guid: 813d93d88ed0c6a4fbba4fa7e7ee6ad8, type: 3}
+  - {fileID: 21300000, guid: 4607038ab04bd07429c6efcb5c4c6d73, type: 3}
+  - {fileID: 21300000, guid: 4dda2514bc958c240a5e4c328b49a510, type: 3}
+  - {fileID: 21300000, guid: 5c8e5243e703b894da015d3f54c9f4fc, type: 3}
+  - {fileID: 21300000, guid: 502c61bbefb6a584481f9846f642780d, type: 3}

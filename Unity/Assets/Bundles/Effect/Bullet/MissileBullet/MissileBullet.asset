@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac025c2c5f8fd945b495959978b6aed, type: 3}
+  m_Name: MissileBullet
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 21300000, guid: b0364dbcb80cefd44ba0898afd5da275, type: 3}
+  - {fileID: 21300000, guid: 8aa04ac20bdc5c84a96717b8f12e6989, type: 3}
+  - {fileID: 21300000, guid: 181c101103b686249b617d8cf35b96e5, type: 3}
+  - {fileID: 21300000, guid: 6d63945037059bc4b9d22ed8d70c08f2, type: 3}
+  - {fileID: 21300000, guid: f5f41877a957ad3409e557c5a506147f, type: 3}
+  - {fileID: 21300000, guid: e97cfd7b379315b48bc356af99fc93dc, type: 3}
+  - {fileID: 21300000, guid: 320e9a1f8690bb5488c199de70749411, type: 3}
+  - {fileID: 21300000, guid: d6ff60ce6571bee438b974ac3d75cbce, type: 3}
+  - {fileID: 21300000, guid: 6f48ad8f8c46069458532f4cc5693971, type: 3}
+  - {fileID: 21300000, guid: d53d5c230c2905c43a222b5de425728e, type: 3}
+  - {fileID: 21300000, guid: 0d206e2a1ef58ea4f942482912832a7e, type: 3}
+  - {fileID: 21300000, guid: 8be289348ce4e1141a32062ee13e8812, type: 3}
+  - {fileID: 21300000, guid: ea9432fe7853d96489c8f1c1aa3fe5f0, type: 3}
+  - {fileID: 21300000, guid: 2f532eca5b850f14884e95f0ddff5e33, type: 3}
+  - {fileID: 21300000, guid: bcb7e89076b6fdf4e96ddb1310a61743, type: 3}
+  - {fileID: 21300000, guid: 78b44373d2006b4488be5b08585802dc, type: 3}

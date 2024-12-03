@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+import "item.proto";
+
+package transfer;
+
+option go_package = "./transfer";
+
+
+// 获取玩家礼包商城信息请求
+//ResponseType = UserGiftInfoResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gift/info
+message UserGiftInfoReq // IRequest
+{
+}
+
+// 获取玩家礼包商城信息的响应
+message UserGiftInfoResp // IResponse
+{
+  repeated GiftGoodsInfoDto goodsInfos = 1; // 玩家已购买的兑换商品
+}
+
+message GiftGoodsInfoDto
+{
+  int32 cid = 1; // 商品配置id
+  int32 purchasedCount = 2; // 限购周期内已购买次数
+//  int64 purchasedInPast = 3; // 历史已购买次数
+}
+
+// 玩家商城购买请求
+//ResponseType = GiftPurchaseResp
+//MessageVerb = POST
+//GameUrlOpcode = api/gift/purchase
+message GiftPurchaseReq // IRequest
+{
+  int32 cid = 1; // 商品配置id
+}
+
+// 玩家商城购买响应
+message GiftPurchaseResp // IResponse
+{
+  repeated RoleItemChangeDto changes = 1; // 玩家道具的变动
+}
