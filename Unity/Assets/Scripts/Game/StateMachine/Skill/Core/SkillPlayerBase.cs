@@ -16,7 +16,7 @@ namespace Skills.Core
 		void Recycle();
 	}
 
-	public abstract partial class SkillPlayerBase<T_SkillContext, T_ParamContext>
+	public abstract partial class SkillPlayerBase<T_SkillContext, T_ParamContext>//技能释放着本体
 				where T_SkillContext : class, ISkillContext
 				where T_ParamContext : class, IParamContext
 	{
@@ -31,6 +31,9 @@ namespace Skills.Core
 
 		public class Skill : IObjectPoolItem
 		{
+			/// <summary>
+			/// 技能具体行为列表
+			/// </summary>
 			public class RunningList : IObjectPoolItem
 			{
 				private static UObjectPool<Skill.RunningList> pool = new UObjectPool<Skill.RunningList>(200);
@@ -55,11 +58,11 @@ namespace Skills.Core
 				/// <summary>
 				/// 技能具体行为的初始化
 				/// </summary>
-				/// <param name="skillBehaviorBase"></param>
-				/// <param name="SkillContext"></param>
-				/// <param name="paramContext"></param>
-				/// <param name="onTriggerList"></param>
-				/// <param name="behaviorFactory"></param>
+				/// <param name="skillBehaviorBase">技能具体行为</param>
+				/// <param name="SkillContext">技能具体行为所持有的组件信息</param>
+				/// <param name="paramContext">技能具体行为所持有的交互信息</param>
+				/// <param name="onTriggerList">（未知触发回调，怀疑行为结束的连续）</param>
+				/// <param name="behaviorFactory">技能具体行为的工厂接口</param>
 				public void Init(SkillPlayerBehaviorBase skillBehaviorBase, T_SkillContext SkillContext, T_ParamContext paramContext, Action<SkillPlayerBehaviorBase> onTriggerList, ISkillFactory behaviorFactory)
 				{
 					var mainData = skillBehaviorBase.data;
@@ -68,6 +71,7 @@ namespace Skills.Core
 
 					if (mainData != null && mainData.triggerList != null && mainData.triggerList.Count > 0)
 					{
+						//根据外部传入的数据获取技能行为列表的数据并根据数据生成对应的技能具体行为{参靠{bullent,Audio等等}}
 						for (int i = 0; i < mainData.triggerList.Count; i++)
 						{
 							SkillPlayerBaseData data = mainData.triggerList[i];
@@ -78,29 +82,33 @@ namespace Skills.Core
 					}
 				}
 
+				/// <summary>
+				/// 技能具体行为列表的刷新
+				/// </summary>
+				/// <param name="deltaTime">间隔时间</param>
 				public void Update(float deltaTime)
 				{
-					if (started)
+					if (started)//前提，技能已经开始
 					{
-						if (list != null)
+						if (list != null)//列表不为空
 						{
 							for (int i = 0; i < list.Count; i++)
 							{
-								list[i].Update(duration);
+								list[i].Update(duration);//刷新技能具体行为，传递当前技能持续时间
 							}
 						}
 
-						duration += deltaTime;
+						duration += deltaTime;//技能持续时间的累计
 					}
 				}
 
-				public void Start()
+				public void Start()//技能的开始
 				{
-					started = true;
-					duration = 0f;
+					started = true;//技能开始的标识
+					duration = 0f;//技能的持续时间归零
 				}
 
-				public bool CheckPlayDone()
+				public bool CheckPlayDone()//检测所有的技能具体行为是否结束
 				{
 					for (int i = 0; i < list.Count; i++)
 					{
@@ -134,35 +142,45 @@ namespace Skills.Core
 				return skillPool.Get();
 			}
 
-			private List<RunningList> runningTriggeredList = new List<RunningList>(20);
+			private List<RunningList> runningTriggeredList = new List<RunningList>(20);//技能行为列表{一个技能包含：主行为{多个技能具体行为}，次级行为{多个技能具体行为}}
 
-			public void OnTriggerRunningList(SkillPlayerBehaviorBase skillBehaviorBase)
+			public void OnTriggerRunningList(SkillPlayerBehaviorBase skillBehaviorBase)//根据当前技能具体，获取技能具体行为列表，并进行初始化
 			{
 				var runningList = RunningList.Get();
 				runningList.Init(skillBehaviorBase, skillContext, paramContext, OnTriggerRunningList, skillBehaviorFactory);
 				runningTriggeredList.Add(runningList);
-				runningList.Start();
+				runningList.Start();//技能具体行为开始运转
 			}
 
 			private static UDebugger debugger = new UDebugger("Skill");
 
-			public T_SkillContext skillContext;
+			public T_SkillContext skillContext;//技能所持有的组件数据
+			public T_ParamContext paramContext;//急哦能所持有的交互信息
+			private SkillMainBehavior skillMainBehavior = new SkillMainBehavior();//技能具体行为的载体，不具备其他意义，单纯为传递数据
+			private ISkillFactory skillBehaviorFactory;//技能工厂的接口
 
-			private SkillMainBehavior skillMainBehavior = new SkillMainBehavior();
-			public T_ParamContext paramContext;
-			private ISkillFactory skillBehaviorFactory;
-
+			/// <summary>
+			/// 技能初始化
+			/// </summary>
+			/// <param name="skillPlayerBaseData">技能所持有的技能具体行为数据</param>
+			/// <param name="skillContext">技能所持有的组件数据</param>
+			/// <param name="paramContext">技能所持有的交互数据</param>
+			/// <param name="skillBehaviorFactory">技能具体行为生成工厂</param>
 			public void Init(SkillPlayerBaseData skillPlayerBaseData, T_SkillContext skillContext, T_ParamContext paramContext, ISkillFactory skillBehaviorFactory)
 			{
-				this.skillContext = skillContext?.Clone() as T_SkillContext;
-				this.paramContext = paramContext;
+				this.skillContext = skillContext?.Clone() as T_SkillContext;//克隆一份数据,防止多个技能具体行为产生冲突
+				this.paramContext = paramContext;//技能具体行为的交互数据
 				this.skillBehaviorFactory = skillBehaviorFactory;
 
-				skillMainBehavior.Init(skillPlayerBaseData, skillContext, paramContext, null, OnTriggerRunningList);
+				skillMainBehavior.Init(skillPlayerBaseData, skillContext, paramContext, null, OnTriggerRunningList);//初始化数据载体
 
-				OnTriggerRunningList(skillMainBehavior);
+				OnTriggerRunningList(skillMainBehavior);//解析数据并运行
 			}
 
+			/// <summary>
+			/// 技能刷新
+			/// </summary>
+			/// <param name="deltaTime">刷新间隔</param>
 			public void Update(float deltaTime)
 			{
 				for (int i = 0; i < runningTriggeredList.Count; i++)
@@ -171,9 +189,8 @@ namespace Skills.Core
 				}
 			}
 
-			public bool CheckPlayDone()
+			public bool CheckPlayDone()//检测所有的技能行为是否完成（主行为，次级行为）
 			{
-				bool hasAllDone = true;
 
 				if (runningTriggeredList.Count > 0)
 				{
@@ -181,12 +198,11 @@ namespace Skills.Core
 					{
 						if (!runningTriggeredList[i].CheckPlayDone())
 						{
-							hasAllDone = false;
+							return false;
 						}
 					}
 				}
-
-				return hasAllDone;
+				return true;
 			}
 
 			public void Recycle()
@@ -208,7 +224,7 @@ namespace Skills.Core
 				skillContext?.Recycle();
 				skillContext = null;
 
-				paramContext?.OnSkillEnd();
+				paramContext?.OnSkillEnd();//技能结束后，运行的逻辑
 				paramContext?.Recycle();
 				paramContext = null;
 			}
@@ -227,14 +243,14 @@ namespace Skills.Core
 
 		private ISkillFactory skillBehaviorFactory;
 
-		private T_SkillContext skillContext;
+		private T_SkillContext skillContext;//技能释放者所持有的组件数据
 		public void Init(T_SkillContext skillContext, ISkillFactory skillBehaviorFactory)
 		{
 			this.skillContext = skillContext;
 			this.skillBehaviorFactory = skillBehaviorFactory;
 		}
 
-		public bool isPlaying
+		public bool isPlaying//判定技能处于运行中
 		{
 			get
 			{
@@ -242,8 +258,33 @@ namespace Skills.Core
 			}
 		}
 
-		protected List<Skill> runningSkillList = new List<Skill>(30);
+		protected List<Skill> runningSkillList = new List<Skill>(30);//一个技能释放着，拥有多个技能
 
+		public void Play(SkillMainData skillData,T_ParamContext paramContext)
+		{
+			Skill skill = Skill.Get();//获取技能
+			skill.Init(skillData, skillContext,paramContext,skillBehaviorFactory);//初始化技能相关参数
+			OnSkillPlay(skill.skillContext,skill.paramContext);//技能执行开始时，执行的逻辑
+			runningSkillList.Add(skill);//将技能添加进技能列表
+		}
+
+		private void Update(float deltaTime)//刷新
+		{
+			if(runningSkillList.Count > 0)
+			{
+				for(int i=runningSkillList.Count - 1; i >= 0; i--)//倒着遍历是为了在删除执行完的技能行为时不影响列表
+				{
+					var skill = runningSkillList[i];//获取当前遍历技能
+					skill.Update(deltaTime);//刷新当前技能行为
+					if (skill.CheckPlayDone())//检测技能是否执行完成
+					{
+						debugger.LogFormat("Play Done:{0}",skill);
+						skill.Recycle();//回收技能
+						runningSkillList.RemoveAt(i);//在列表删除当前技能
+					}
+				}
+			}
+		}
 
 		public void Clear()
 		{

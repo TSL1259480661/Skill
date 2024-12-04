@@ -1,9 +1,4 @@
-using App;
 using Skills.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
 
 namespace Skills
 {
@@ -21,5 +16,5 @@ namespace Skills
 		public TargetEnum toTargetEnum;
 	}
 
-	
+	//public interface ISkillTarget : ISkillTargetBase
 }
